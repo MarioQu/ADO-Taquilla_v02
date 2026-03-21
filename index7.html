@@ -11,6 +11,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
         <title>Taquilla reversible</title>
+        <style>
+            .navs-purple .nav-link.active, 
+            .navs-purple .show>.nav-link {
+                color: var(--purple);
+                background-color: var(--white);
+                border-bottom: 3px solid transparent;
+            }
+            .navs-purple .boleto-ok-nav button{
+                color: #258910 !important;
+            }.navs-purple .boleto-ok-nav{
+                border-bottom: 3px solid var(--green) !important;
+            }
+        </style>
     </head>
     
     <body class="gray2back">
@@ -79,10 +92,10 @@
         <section class="container-fluid containerlg-trayecto py-4" style="margin-bottom: 150px;">
             <div class="container-lg rounded-lg">
                 <ul class="nav nav-pills nav-fill navs-purple whiteback mb-0 pb-0" id="myTab" role="tablist">
-                    <li class="nav-item rounded-0" role="presentation">
-                        <button class="nav-link rounded-0 w-100 active" id="ida-tab" data-toggle="tab" data-target="#ida" type="button" role="tab" aria-controls="ida" aria-selected="true">Ida</button>
+                    <li class="nav-item rounded-0 boleto-ok-nav" role="presentation">
+                        <button class="nav-link rounded-0 w-100 active" id="ida-tab" data-toggle="tab" data-target="#ida" type="button" role="tab" aria-controls="ida" aria-selected="true"><img src="assets/images/check-green.svg" style="width: 20px;" alt=""> Ida</button>
                     </li>
-                    <li class="nav-item rounded-0" role="presentation">
+                    <li class="nav-item rounded-0" role="presentation" style="border-bottom: 3px solid #5F2167;">
                         <button class="nav-link rounded-0 w-100" id="regreso-tab" data-toggle="tab" data-target="#regreso" type="button" role="tab" aria-controls="regreso" aria-selected="false">Regreso</button>
                     </li>
                 </ul><!-- nav-item -->
@@ -92,8 +105,8 @@
                         <div class="container-fluid py-3">
                             <div class="row pb-3 rounded-lg whiteback">
                                 <div class="col-12">
-                                    <h5 class="titles24 text-left dblack">Elige tu(s) asiento(s) de <span class="fpurple">ida</span></h5>
-                                    <img src="assets/images/ADO.png" alt="" style="position: absolute; right: 20px; top: 0;">
+                                    <h5 class="titles24 text-left dblack">Elige tu(s) asiento(s) de <span class="fpurple">regreso</span></h5>
+                                    <img src="assets/images/logo-au.png" alt="" style="position: absolute; right: 20px; top: 0;">
                                 </div>
                                 
                                 <div class="col-12 py-3">
@@ -382,7 +395,296 @@
                     </div> <!-- tab-pane 1 -->
                     
                     <div class="tab-pane fade" id="regreso" role="tabpanel" aria-labelledby="regreso-tab">
-                        2...
+                        <div class="container-fluid py-3">
+                            <div class="row pb-3 rounded-lg whiteback">
+                                <div class="col-12">
+                                    <h5 class="titles24 text-left dblack">Elige tu(s) asiento(s) de <span class="fpurple">regreso</span></h5>
+                                    <img src="assets/images/logo-au.png" alt="" style="position: absolute; right: 20px; top: 0;">
+                                </div>
+                                
+                                <div class="col-12 py-3">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row mr-4" data-aos="fade-down" data-aos-duration="1400">
+                                            <div class="bullets-asientos disp mr-2"></div> Disponible
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row mr-4" data-aos="fade-up" data-aos-duration="1700">
+                                            <div class="bullets-asientos nodisp mr-2"></div> No disponible
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start flex-column flex-sm-row flex-md-row flex-lg-row" data-aos="fade-down" data-aos-duration="2000">
+                                            <div class="bullets-asientos select mr-2"></div> Seleccionado
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 text-center">
+                                    <img src="assets/images/asientos-select.png" class="img-fluid w-100" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="row pt-3 gray2back">
+                                <div class="col-12">
+                                    <h5 class="f500 txt24">Enviar tu(s) boleto(s)</h5>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <form action="" class="">
+                                        <div class="form-row shadow p-3 rounded-lg">                                        
+                                            <div class="form-group col-6">
+                                                <label for="email" class="txt16 mb-1 f500">Correo electrónico o celular</label>
+                                                <input type="email" class="form-control fblack txt18 shadow-none" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <label for="email" class="txt16 mb-1 f500">Confirmar Correo electrónico o celular</label>
+                                                <input type="email" class="form-control fblack txt18 shadow-none" id="email" placeholder="Ej: mario@correo.com ó 5512234556">
+                                            </div>                                                                    
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- enviar boletos -->
+                            
+                            
+                            <div class="row pt-5 gray2back">
+                                <div class="col-6">
+                                    <h5 class="f500 txt24">Registra a tu(s) pasajero(s)</h5>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="" data-toggle="modal" data-target="#modalAsistencia" class="txt18 f700 fgreen2">
+                                        ¿Qué es la asistencia total? <img src="assets/images/info.png" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                
+                                <div class="col-12 mt-3 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pb-3">
+                                            <span class="txt18 fblack text-left"><b>Pasajero 1: Adulto</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                            
+                                           <form action="">
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="nombre" class="txt16 f500 mb-2">Nombre(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="nombre" placeholder="Ej: María">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label for="apellidos" class="txt16 f500 mb-2">Apellido(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
+                                                    </div>                                                    
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>                        
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 pasajero -->
+                                
+                                <div class="col-12 mt-5 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pb-3">
+                                            <span class="txt18 fblack text-left"><b>Pasajero 2: Adulto</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                            
+                                           <form action="">
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="nombre" class="txt16 f500 mb-2">Nombre</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="nombre" placeholder="Ej: María">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label for="apellidos" class="txt16 f500 mb-2">Apellido(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
+                                                    </div>                                                    
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>                        
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 pasajero -->
+                                
+                                <div class="col-12 mt-5 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pb-3">
+                                            <span class="txt18 fblack text-left"><b>Pasajero 3: Adulto</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                            
+                                           <form action="">
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="nombre" class="txt16 f500 mb-2">Nombre</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="nombre" placeholder="Ej: María">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label for="apellidos" class="txt16 f500 mb-2">Apellido(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
+                                                    </div>                                                    
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>                        
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 pasajero -->
+                                
+                                <div class="col-12 mt-5 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pb-3">
+                                            <span class="txt18 fblack text-left"><b>Pasajero 4: Niño</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                            
+                                           <form action="">
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="nombre" class="txt16 f500 mb-2">Nombre</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="nombre" placeholder="Ej: María">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label for="apellidos" class="txt16 f500 mb-2">Apellido(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
+                                                    </div>                                                    
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>                        
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 pasajero -->
+                                
+                                <div class="col-12 mt-5 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pb-3">
+                                            <span class="txt18 fblack text-left"><b>Pasajero 5: INAPAM</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                            
+                                           <form action="">
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="nombre" class="txt16 f500 mb-2">Nombre</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="nombre" placeholder="Ej: María">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <label for="apellidos" class="txt16 f500 mb-2">Apellido(s)</label>
+                                                        <input type="text" class="form-control txt18 shadow-none" id="apellidos" placeholder="Ej: Torres Gómez">
+                                                    </div>                                                    
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-6 d-flex align-items-start justify-content-start">
+                                                        <span class="txt16 f500 f18 mr-2">Agregar asistencia total</span>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input custom-control-input-lg" id="asistenciatotal" checked>
+                                                            <label class="custom-control-label pl-2" for="asistenciatotal">Ida $15.00 MXN</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>                        
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 pasajero -->
+                                
+                                <!-- Aceptar términos -->
+                                <div class="col-12 mt-4 shadow rounded-lg">
+                                    <div class="row">
+                                        <div class="col-12 pt-3">
+                                            <form action="">
+                                                <div class="form-group col-12 d-flex align-items-center justify-content-start">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input custom-control-input-lg" id="okterminos" checked>
+                                                        <label class="custom-control-label pl-2" for="okterminos">De acuerdo con los <a href="" class="fpurple f700">Términos y Condiciones</a>, así como el <a href="" class="fpurple f700">Aviso de Privacidad</a>.</label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- col-12 aceptar términos -->
+                                
+                                <!-- Resumen pedido -->
+                                <div class="col-12 mt-4 shadow rounded-lg py-3 px-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="f700 txt24 fpurple">Viaje de Ida</span><br>
+                                            <span class="f500 txt18" style="color: #6F7587;">Vie. 12 mar. 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col-8"><span class="f700 txt24">3 Adultos</span></div>
+                                        <div class="col-4 text-right"><span class="f700 txt24">$2,268.00 MXN</span></div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-8"><span class="f700 txt24">2 niños</span></div>
+                                        <div class="col-4 text-right"><span class="f700 txt24">$504.00 MXN</span></div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-8"><span class="f700 txt24">1 INAPAM</span></div>
+                                        <div class="col-4 text-right"><span class="f700 txt24">$252.00 MXN</span></div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-8"><span class="f500 txt24">6 asistencias totales ida</span></div>
+                                        <div class="col-4 text-right"><span class="f700 txt24">$90.00 MXN</span></div>
+                                    </div>
+                                </div><!-- col-12 Resumen pedido -->
+                            </div><!-- registra pasajeros -->
+                        </div>
                     </div> <!-- tab-pane 2 -->
                 </div>
             </div>   
@@ -395,7 +697,7 @@
                         <a href="pantalla3.html" class="btn btn-white w-100 py-4 titles24 shadow-none">Regresar</a>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                        <a href="index6.html" class="btn btn-gray w-100 py-4 titles24 shadow-none">Continuar</a>
+                        <a href="index8.html" class="btn btn-gray w-100 py-4 titles24 shadow-none">Continuar</a>
                     </div>
                 </div>
             </div>
