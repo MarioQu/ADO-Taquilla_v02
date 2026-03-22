@@ -629,6 +629,40 @@ input, .form-control, label, .custom-control-input, .custom-control-label{
     border-bottom: 3px solid var(--purple);
 }
 
+#carouselViajes .carousel-control-next-icon {
+    background-image: url("../images/right.svg");
+}
+#carouselViajes .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+#carouselViajes .carousel-inner{
+    border-radius: 10px;
+}
+#carouselViajes .carousel-control-next{
+    opacity: 1 !important;
+}
+.card-boletos-car{
+    border: 1px solid #B5BAC7;
+    background-color: #ECEFF6;
+    border-radius: 10px;
+}
+
+.carouselBoletos-btns .carousel-control-next-icon {
+    background-image: url("../images/right.svg");
+}.carouselBoletos-btns .carousel-control-prev-icon {
+    background-image: url("../images/left.svg");
+}.carouselBoletos-btns .carousel-control-next-icon,
+.carouselBoletos-btns .carousel-control-prev-icon {
+    width: 60px;
+    height: 60px;
+    /* margin-bottom: -1000px; */
+}
+.carouselBoletos-btns .carousel-control-next, 
+.carouselBoletos-btns .carousel-control-prev{
+    width: 70%;
+}
+
 
 /* **************************************  
             Pantalla Pago 

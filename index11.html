@@ -157,6 +157,14 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Eliminar este bloque, ya que son los accesos directos para los popups de error -->
+        <div class="container-lg text-center mb-5">
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#error1">Error 1</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#error2">Error 2</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#error3">Error 3</button>
+        </div>
+        <!-- -->
 
        
         <footer class="container-fluid" id="footer-pago">
@@ -171,6 +179,83 @@
                 </div>
             </div>
         </footer>
+        
+        <!-- Modal Error 1 -->
+        <div class="modal fade" id="error1" tabindex="-1" aria-labelledby="error1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" style="height: auto !important;">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/warning.png" class="img-fluid mb-3" alt="">
+                        <h5 class="titles32 fblack mb-3">Título del mensaje</h5>
+                        <p class="txt18 fblack">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam aliquet felis eu commodo dignissim vestibulum ac blandit enim
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Error 2 -->
+        <div class="modal fade" id="error2" tabindex="-1" aria-labelledby="error2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" style="height: auto !important;">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/warning.png" class="img-fluid mb-3" alt="">
+                        <h5 class="titles32 fblack mb-3">Título del mensaje</h5>
+                        <p class="txt18 fblack">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam aliquet felis eu commodo dignissim vestibulum ac blandit enim
+                        </p>
+                        
+                        <button type="button" class="btn btn-purple w-100 txt24 py-3 my-3" data-dismiss="modal">
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal Error 3 -->
+        <div class="modal fade" id="error3" tabindex="-1" aria-labelledby="error3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" style="height: auto !important;">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/images/warning.png" class="img-fluid mb-3" alt="">
+                        <h5 class="titles32 fblack mb-3">Título del mensaje</h5>
+                        <p class="txt18 fblack">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam aliquet felis eu commodo dignissim vestibulum ac blandit enim
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-white w-100 txt24 py-3 my-3" data-dismiss="modal">
+                                    Cancelar
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-purple w-100 txt24 py-3 my-3" data-dismiss="modal">
+                                    Continuar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
        
             
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> 
