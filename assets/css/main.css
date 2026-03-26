@@ -23,6 +23,9 @@ body{
 /* ----------------------------------
                 Globales 
 ---------------------------------- */
+ul{
+    list-style: none;
+}
 .norad{
     border-radius: 0 !important;
 }
@@ -84,6 +87,14 @@ body{
     border-top: 1px solid #169A8E;
     border-bottom: 1px solid #169A8E;
 }
+.green-div2{
+    background-color: #EBF7F6;
+    border: 1px solid #B9E9E4;
+}
+.green-div3{
+    background-color: #E7F7E4;
+    border: 1px solid #258910;
+}
 .form-check-input:checked {
     background-color: var(--purple1);
     border-color: var(--purple1);
@@ -113,6 +124,9 @@ body{
 .f-green1{
     color: #258910;
 }
+.f-green2{
+    color: #169A8E;
+}
 .f-purple{
     color: var(--purple1);
 }
@@ -131,6 +145,10 @@ body{
 }
 .faback{
     background: #FAFAFA;
+}
+.purpleback{
+    background: #E4DAE6;
+    border: 1px solid #5F2167;
 }
 
 
@@ -218,6 +236,16 @@ body{
 }.gray1-btn:hover{
     background-color: #258910;
     color: var(--white);
+}
+
+.green-btn{
+    background-color: #258910;
+    color: var(--white);
+    border: 1px solid #258910;
+}.green-btn:hover{
+    background-color: var(--white);
+    color: #258910;
+    border: 1px solid #258910;
 }
 
 .btnlang{
@@ -446,6 +474,10 @@ body{
 /* ----------------------------------
             Corridas 
 ---------------------------------- */
+#corridas{
+    height: 1245px;
+    overflow-y: scroll;
+}
 .nav-corridas li button{
     border-bottom: solid 3px transparent;
     position: inherit;
@@ -486,11 +518,11 @@ body{
 
 
 .corridasBox-top{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }.corridasBox-bottom{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .list-group .list-group-item:not(:last-child) {
@@ -505,3 +537,75 @@ body{
     border-bottom: 2px solid #B5BAC7;
     background-color: #ECEFF6;
 }
+
+.borders-x{
+    background-image: url("../images/line-border.png"), url("../images/line-border.png");
+    background-size: 1px 60%, 1 60%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right center, left center;
+}
+.border-lx{
+    background-image: url("../images/line-border.png");
+    background-size: 1px 60%;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.list-borders1 li:not(:last-child){
+    background-image: url("../images/line-white.png");
+    background-size: 1px 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.btn-corridas-selec{
+    padding: 13px 10px;
+}
+
+/* 
+    Corridas asientos
+*/
+.bullets-asientos{
+    width: 15px; 
+    height: 15px;                  
+    border-radius: 50%;
+}
+.bullets-asientos.disp{
+    border: 1px solid #B5BAC7;
+    background-color: #fff;
+}
+.bullets-asientos.nodisp{
+    border: 1px solid #B5BAC7;
+    background-color: #848CA2;
+}
+.bullets-asientos.select{
+    background-color: var(--purple1);
+    border: 1px solid #B5BAC7;
+}
+
+
+.navsBoletos{
+    border: 5px solid #ECEFF6;
+    border-radius: 16px;
+}
+.navsBoletos .nav-link.active,
+.navsBoletos .nav-link:hover, 
+.navsBoletos .show>.nav-link {
+    color: var(--white);
+    background-color: var(--purple1);
+}
+.navsBoletos .nav-link{
+    color: #808391;
+}
+
+.card-boletos-car{
+    border: 1px solid #B5BAC7;
+    background-color: #ECEFF6;
+    border-radius: 10px;    
+}
+.border-red{
+    box-shadow: 0px -20px 0px -3px var(--red1) inset;
+}
+.border-orange{
+    box-shadow: 0px -20px 0px -3px #FF6633 inset;
+}
+
