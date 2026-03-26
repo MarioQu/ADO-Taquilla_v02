@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <section class="container-lg px-5" style="background-color: #F1F3F9;">
+            <div class="row pt-4 pb-3">
+                <div class="col-6">
+                    <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Editar búsqueda
+                    </button>                        
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-end">
+                    <p class="fw-700 f24 p-0 m-0">23 de marzo 6:31h</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container-lg whiteback">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true">
+                                <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="boletos-off me-2">
+                                <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="boletos-on d-none me-2">
+                                Elegir boletos
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="asientos-off me-2"> 
+                                <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on d-none me-2">
+                                Asientos
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
+                                <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
+                                Registro
+                            </button>
+                        </li>
+                        <li class="nav-item border-0" role="presentation">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
+                                <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
+                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
+                                Pago
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- boletos-pane -->
+                        
+                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- asientos-pane -->
+                        
+                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- registro-pane -->
+                        
+                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- pago-pane -->
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="row green-div1 py-4 px-3">
+                <div class="col">
+                    <span class="fblack f-28 fw-700">Elige tu boleto de ida</span>
+                </div>
+                <div class="col text-end">
+                    <span class="f-purple f-28 fw-700">Lunes 23 de marzo 6:30h</span>
+                </div>
+            </div>
+            
+            <!-- Corridas -->
+            <div class="row">
+                <div class="col-12" id="corridas">
+                    <!-- 
+                        Aquí se pintan las corridas N veces (mediante la función javascript de abajo) para evitar repetir el bloque HTML,
+                        si se quiere quitar la función y pintar el HTML de forma normal, basta con traer aquí el código dentro de la variable bloqueHTML
+                    -->
+                </div>
+            </div>
+        </section>
+
+        
+        <script src="assets/js/jquery-4.0.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            const corridas = document.getElementById('corridas');
+            const bloqueHTML = `
+                <div class="container-lg">
+                    <div class="row shadow whiteback mt-4 pt-3 pb-4 corridasBox-top">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 d-flex align-items-start justify-content-between borders">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                    <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                    <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                    <p class="f-12 fw-500 pb-0 mb-0">Costa Esmeralda, Ver.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 px-2 d-flex align-items-center justify-content-around">
+                            <div>
+                                <p class="f-14 f-red text-right mb-0 pb-0">
+                                    <img src="assets/images/iconos-logos/promo.png" class="img-fluid mt-n1" >
+                                    $1,200.00 MXN
+                                </p>
+                                <p class="f-18 fw-700 text-right mb-0 pb-0">$1,000.00MXN</p>
+                            </div>
+                            
+                            <a href="pantalla3.html" class="btn purple-btn shadow-none py-2">Seleccionar</a>
+                        </div>               
+                    </div><!-- /row corridas -->
+                    
+                    <div class="row shadow corridasBox-bottom" style="border-top: 1px solid #B5BAC7; background-color: #ECEFF6;">
+                        <div class="col-8">
+                            <ul class="list-group list-group-horizontal justify-content-end">
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Viaje Local</span>
+                                    <img src="assets/images/iconos-logos/info.png" class="img-fluid" alt="" style="width: 15px;">
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Servicio Lujo</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Quedan 29 asientos</span>                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn purple-link d-flex align-items-center txt14" style="font-weight: 500;" data-toggle="modal" data-target="#modalInfo">
+                                <span class="me-2">Más Información</span>
+                                <iconify-icon icon="formkit:right" width="7" height="16"  style="color: #5F2167"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+                
+                
+                <div class="container-lg">
+                    <div class="row shadow whiteback mt-4 pt-3 pb-4 corridasBox-top">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 d-flex align-items-start justify-content-between borders">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                    <p class="f-12 f-black m-0 p-0">3h 10min. aprox. </p>
+                                    <p class="f-20 fw-700 m-0 p-0">08:20 h</p>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-between">
+                                    <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                    <p class="f-12 fw-500 pb-0 mb-0">Costa Esmeralda, Ver.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 px-2 d-flex align-items-center justify-content-around">
+                            <div>
+                                <p class="txt14 f-red text-right mb-0 pb-0">
+                                    <img src="assets/images/iconos-logos/promo.png" class="img-fluid mt-n1" >
+                                    $1,200.00 MXN
+                                </p>
+                                <p class="f-18 fw-700 f-black text-right mb-0 pb-0">$1,000.00MXN</p>
+                            </div>
+                            
+                            <a href="pantalla3.html" class="btn btn-purple shadow-none btn-corridas">Seleccionar</a>
+                        </div>               
+                    </div><!-- /row corridas -->
+                    
+                    <div class="row shadow corridasBox-bottom" style="border-top: 1px solid #B5BAC7; background-color: #ECEFF6;">
+                        <div class="col-8">
+                            <ul class="list-group list-group-horizontal justify-content-end">
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Viaje Local</span>
+                                    <img src="assets/images/iconos-logos/info.png" class="img-fluid" alt="" style="width: 15px;">
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Servicio Lujo</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="f-12" style="font-weight: 500;">Quedan 29 asientos</span>                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn purple-link d-flex align-items-center txt14" style="font-weight: 500;" data-toggle="modal" data-target="#modalInfo">
+                                <span class="me-2">Más Información</span>
+                                <iconify-icon icon="formkit:right" width="7" height="16"  style="color: #5F2167"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            `;
+
+            
+            for (let i = 0; i < 4; i++) {
+                corridas.innerHTML += bloqueHTML; 
+            }
+        </script>
+    </body>
+</html>

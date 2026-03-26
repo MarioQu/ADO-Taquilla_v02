@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div class="back-red"></div>
+        
+        <section class="container-lg px-5">
+            <div class="row mt-3 mb-3">                
+                <div class="col-5">
+                    <img src="assets/images/iconos-logos/ADO-white.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-7 d-flex align-items-cemter justify-content-end">
+                    <a href="" class="btn purple-btn radius8 btnlang d-flex align-items-center justify-content-center f-24 me-2">
+                        <img src="assets/images/iconos-logos/idioma-white.svg" alt="" class="me-1"> Español
+                    </a>
+                    <a href="" class="btn white-btn radius8 btnlang d-flex align-items-center justify-content-center f-24">
+                        <img src="assets/images/iconos-logos/idioma-purple.svg" alt="" class="me-1"> English
+                    </a>
+                </div>
+                <div class="col-12 mt-4">
+                    <span class="f-white fw-700 f-40">Compra tus boletos más rápido</span>
+                </div>
+            </div>
+            
+            
+            <div class="row white-opacity-cont rad20 shadow px-4 pt-3">
+                <div class="col-12">
+                    <p class="f-32 f-black text-center fw-600 ">¿A dónde quieres viajar?</p>
+                    
+                    <div class="row whiteback rad20 p-4 shadow">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-12 form-group d-flex align-items-center ida_regreso p-0" style="border: 5px solid #E9E9E9; border-radius: 4px;">                                    
+                                    <div class="custom-radio w-100">
+                                        <input class="form-check-input shadow-none" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                        <label class="form-check-label text-center" for="inlineRadio1">Ida y regreso</label>
+                                    </div>
+                                    <div class="custom-radio w-100">
+                                        <input class="form-check-input shadow-none" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label text-center" for="inlineRadio2">Solo ida</label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="origen" class="form-label mb-1 f-18">Origen</label>
+                                    <input type="text" class="form-control" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen">
+                                </div>
+                                <div class="col">
+                                    <label for="destino" class="form-label mb-1 f-18">Destino</label>
+                                    <input type="text" class="form-control" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino">
+                                </div>
+                            </div><!-- row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="ida" class="form-label f-18 mb-1">Fecha de ida</label>
+                                    <input type="text" class="form-control" id="ida" placeholder="Lun. 23 de marzo" data-bs-toggle="modal" data-bs-target="#modal-fechas">
+                                </div>
+                                <div class="col">
+                                    <label for="regreso" class="form-label f-18 mb-1">Fecha de regreso</label>
+                                    <input type="text" class="form-control" id="regreso" placeholder="¿Cuándo regresas?" data-bs-toggle="modal" data-bs-target="#modal-fechas">
+                                </div>
+                                <div class="col">
+                                    <label for="pasajeros" class="form-label f-18 mb-1">Pasajeros</label>
+                                    <input type="text" class="form-control" id="pasajeros" placeholder="1 adulto" data-bs-toggle="modal" data-bs-target="#modal-pasajeros">
+                                </div>
+                            </div><!-- row -->
+                            
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <a href="index2.html" class="btn gray1-btn f-24 w-100 rad16 py-3">Buscar viajes</a>
+                                </div>
+                            </div><!-- row -->
+                        </form>
+                    </div>
+                </div><!-- col-12 -->
+                
+                
+                <div class="col-12 mt-3">
+                    <span class="fw-600 f-32 fblack">Destinos Frecuentes</span>
+                    
+                    <div class="row mt-2">
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/guerrero.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Acapulco Costera, Gro.</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/chetumal.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Chetumal, Q.R.</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/merida.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Mérida Centro, Yuc.</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/poza-rica.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Poza Rica, Ver</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/puebla.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Puebla, CAPU, Pue.</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-4 mb-4">
+                            <div class="card card-destino rad16 shadow">
+                                <img src="assets/images/puebla.svg" class="card-img-top" alt="">
+                                <div class="card-body rad16 text-center px-2 faback">
+                                    <h5 class="f20 fw-600">Oaxaca de Juárez, Oax.</h5>
+                                    <button type="button" class="btn white-btn w-100 rad16 f-20 py-2 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </div>
+                        </div><!-- col-4 -->
+                    </div><!-- row -->
+                </div><!-- col-12 -->
+            </div><!-- row -->                                   
+        </section>
+        
+        
+        <!-- ***************************************
+                        Modal Origen
+        *************************************** -->
+        <div class="modal fade modalFull" id="modal-origen" tabindex="-1" aria-labelledby="modal-origenLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content h-100 norad">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
+                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                            <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                        </button>
+                        <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="col-12">
+                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Origen ¿de dónde sales?</h5>                                      
+                            </div>
+                            <div class="row">                                
+                                <div class="col-12">
+                                    <hr class="separador">
+                                    <input type="text" class="form-control rad16 search" placeholder="Encuentra terminal de origen"> 
+                                    <hr class="separador">
+                                </div>
+                                <div class="col-12">
+                                    <h5 class="txt-left f-32 fblack fw-700 pb-0">Terminales</h5>                                      
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <!-- Accoordion -->
+                                <div class="accordion border-0 pt-3" id="accordionTerminales" style="border-top: 1px solid #E6E7E7 !important;">
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                                                Campeche
+                                            </button>
+                                        </h2>
+                                        <div id="collapseUno" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback pt-1">
+                                                <div class="accordion border-0 subaccordions" id="subaccordion1">
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none py-0" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
+                                                                Campeche 1
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- subaccordion-item -->
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
+                                                                Campeche 2
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                   
+                                                </div>
+                                            </div><!-- accordion body -->
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                                                Chiapas
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                 
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                                                Ciudad de México
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
+                                                Estado de México
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCuatro" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+                                                Guerrero
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+                                                Hidalgo
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                <div class="accordion border-0 subaccordions" id="subaccordion2">
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsTres" aria-expanded="false" aria-controls="subCollapsTres">
+                                                                Pachuca de Soto, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsTres" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- subaccordion-item -->
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCuatro" aria-expanded="false" aria-controls="subCollapsCuatro">
+                                                                Tulancingo, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCuatro" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                   
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Apan, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Ciudad Sahagún, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Zacualtipán, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
+                                                Morelos
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSiete" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+                                                Oaxaca
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOcho" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
+                                                Puebla
+                                            </button>
+                                        </h2>
+                                        <div id="collapseNueve" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
+                                                Quintana Roo
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDiez" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
+                                                Tabasco
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOnce" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
+                                                Tlaxcala
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDoce" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
+                                                Veracruz
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTrece" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
+                                                Yucatán
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                </div>
+                                <!-- accordion -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer fixed-bottom py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- ***************************************
+                Modal Destino
+        *************************************** -->
+        <div class="modal fade modalFull" id="modal-destino" tabindex="-1" aria-labelledby="modal-destinoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content h-100 norad">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
+                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                            <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                        </button>
+                        <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="col-12">
+                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Destino ¿a dónde vas?</h5>                                      
+                            </div>
+                            <div class="row">                                
+                                <div class="col-12">
+                                    <hr class="separador">
+                                    <input type="text" class="form-control rad16 search" placeholder="Encuentra una terminal"> 
+                                    <hr class="separador">
+                                </div>
+                                <div class="col-12">
+                                    <h5 class="txt-left f-32 fblack fw-700 pb-0">Terminales</h5>                                      
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <!-- Accoordion -->
+                                <div class="accordion border-0 pt-3" id="accordionDestino" style="border-top: 1px solid #E6E7E7 !important;">
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                                                Campeche
+                                            </button>
+                                        </h2>
+                                        <div id="collapseUno" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback pt-1">
+                                                <div class="accordion border-0 subaccordions" id="subaccordion1">
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none py-0" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
+                                                                Campeche 1
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- subaccordion-item -->
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
+                                                                Campeche 2
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                   
+                                                </div>
+                                            </div><!-- accordion body -->
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                                                Chiapas
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                 
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                                                Ciudad de México
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
+                                                Estado de México
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCuatro" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+                                                Guerrero
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+                                                Hidalgo
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                <div class="accordion border-0 subaccordions" id="subaccordion2">
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsTres" aria-expanded="false" aria-controls="subCollapsTres">
+                                                                Pachuca de Soto, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsTres" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- subaccordion-item -->
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCuatro" aria-expanded="false" aria-controls="subCollapsCuatro">
+                                                                Tulancingo, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCuatro" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                   
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Apan, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Ciudad Sahagún, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item border-0">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                                Zacualtipán, Hgo.
+                                                            </button>
+                                                        </h2>
+                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                            <div class="accordion-body">
+                                                                Lorem...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
+                                                Morelos
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSiete" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+                                                Oaxaca
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOcho" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
+                                                Puebla
+                                            </button>
+                                        </h2>
+                                        <div id="collapseNueve" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
+                                                Quintana Roo
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDiez" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
+                                                Tabasco
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOnce" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
+                                                Tlaxcala
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDoce" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
+                                                Veracruz
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTrece" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
+                                                Yucatán
+                                            </button>
+                                        </h2>
+                                        <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
+                                            <div class="accordion-body faback">
+                                                Lorem...
+                                            </div>
+                                        </div>
+                                    </div><!-- accordion-item -->
+                                </div>
+                                <!-- accordion -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer fixed-bottom py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- ***************************************
+                Modal Fechas
+        *************************************** -->
+        <div class="modal fade modalFull" id="modal-fechas" tabindex="-1" aria-labelledby="modal-fechasLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content h-100 norad">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between-0 p-4">
+                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                            <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                        </button>
+                        <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
+                    </div>
+                    <div class="modal-body px-0">
+                        <div class="container-fluid px-0">
+                            <div class="col-12 px-3">
+                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Elije tus fechas de ida y regreso</h5>                                      
+                            </div>                           
+                        </div>
+                        <div class="container-fluid px-0 mt-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="green-div1 py-3">
+                                        <p class="p-0 m-0 f-20 text-center">
+                                            <img src="assets/images/iconos-logos/descuento.svg" class="me-2" alt="" style="width: 20px;"> <strong>Aprovecha tu compra anticipada</strong> y obtén hasta un <span class="f-green1 fw-500">30% de descuento.</span>
+                                        </p>
+                                    </div>                                      
+                                </div> 
+                                <div class="col-12">
+                                    <ul class="p-0 m-0 list-fechas-viaje d-flex align-items-center justify-content-center shadow py-4" style="background-color: #F4F6F9;">
+                                        <li><div class="circle"></div> Fechas Seleccionadas</li>
+                                        <li><div class="circle"></div> Poca disponibilidad</li>
+                                        <li><div class="circle"></div> Día con descuento</li>
+                                    </ul>
+                                </div> 
+                                
+                                <div class="col-12 text-center pt-4">
+                                    <div id="calendario"></div>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
+                    <div class="modal-footer fixed-bottom py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                        <label class="form-check-label f-20 fw-500" for="checkDefault">
+                                            Quiero ir y regresar el mismo día
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- ***************************************
+                    Modal pasajeros
+        *************************************** -->
+        <div class="modal fade modal-bottom" id="modal-pasajeros" tabindex="-1" aria-labelledby="modal-pasajerosLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content h-100">
+                    <div class="modal-header d-flex align-items-center justify-content-between-0 p-5">
+                        <div>
+                            <p class="f-28 fblack fw-600 p-0 m-0">¿Quiénes viajan?</p>
+                            <p class="f24 pt-2">Puedes agregar hasta 8 pasajeros como máximo</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-5">
+                        <div class="container-fluid">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-8 d-flex align-items-center justify-content-start">
+                                        <img src="assets/images/iconos-logos/adultos.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
+                                        <div>
+                                            <p class="f-32 fw-700 fblack mb-0 pb-0">Adulto</p>
+                                            <span class="fw-300 f-24">Más de 12 años</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <button class="btn btn-cant" id="dec_ad"></button>
+                                        <form action="">
+                                            <input type="text" id="total_ad" class="f-40 form-control" readonly>
+                                        </form>
+                                        <button class="btn btn-cant shadow-none" id="inc_ad"></button>
+                                    </div>
+                                </div>                                    
+                            </div> 
+                            <div class="col-12 mt-5">
+                                <div class="row">
+                                    <div class="col-8 d-flex align-items-center justify-content-start">
+                                        <img src="assets/images/iconos-logos/ninos.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
+                                        <div>
+                                            <p class="f-32 fw-700 fblack mb-0 pb-0">Niños</p>
+                                            <span class="fw-300 f-24">De 5 a 12 años</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <button class="btn btn-cant" id="dec_ni"></button>
+                                        <form action="">
+                                            <input type="text" id="total_ni" class="f-40 form-control" readonly>
+                                        </form>
+                                        <button class="btn btn-cant shadow-none" id="inc_ni"></button>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 mt-5">
+                                <div class="row">
+                                    <div class="col-8 d-flex align-items-center justify-content-start">
+                                        <img src="assets/images/iconos-logos/inapam.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
+                                        <div>
+                                            <p class="f-32 fw-700 fblack mb-0 pb-0">INAPAM</p>
+                                            <span class="fw-300 f-24">Con credencial vigente</span><br>
+                                            <a href="#" class="purple-link f-600 f-20" data-bs-toggle="modal" data-bs-target="#modal-inapam">Más información</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <button class="btn btn-cant shadow-none" id="dec_ina"></button>
+                                        <form action="">
+                                            <input type="text" id="total_ina" class="f-40 form-control" readonly>
+                                        </form>
+                                        <button class="btn btn-cant shadow-none" id="inc_ina"></button>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>                       
+                    </div>
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="index2.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar</a>                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+         <!-- ***************************************
+                    Modal INAMAP
+        *************************************** -->
+        <div class="modal fade modal-bottom" id="modal-inapam" tabindex="-1" aria-labelledby="modal-inapamLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content h-100">
+                    <div class="modal-header d-flex align-items-center justify-content-between-0 p-5">
+                        <div>
+                            <p class="f-28 fblack fw-600 p-0 m-0">INAPAM</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-5">
+                        <div class="container-fluid">
+                            <div class="col-12">
+                                <p class="f-24 fblack">
+                                    <strong class="f-purple">Si tienes tu credencial INAPAM aprovecha el 50% de descuento</strong> que ADO te ofrece:
+                                </p>                                 
+                                <p class="f-24 fblack">
+                                    <strong>a)</strong> Es necesario presentar su <strong class="f-purple">credencial original del INAPAM (antes INSEN) o una identificación oficial: Credencial de elector original INE o pasaporte original vigente o alguna identificación oficial que lo acredite que es mayor de 60 años</strong> para obtener su descuento.                                    
+                                </p>
+                                <p class="f-24 fblack">
+                                    <strong>b)</strong> Limitado a 2 descuentos por autobús en corridas normales en todas nuestras marcas y clases de servicio conforme al DOF de 07/01/1982.
+                                </p>
+                                <p class="f-24 fblack">
+                                    Recuerda que al momento de abordar deberás presentar tu boleto electrónico, Identificación Oficial y credencial de INAPAM vigente; de lo contrario no podrás realizar tu viaje.
+                                </p>
+                                <p class="f-24 fblack">
+                                    No es acumulable con otros descuentos.
+                                </p>
+                            </div>                                                                                 
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    
+        <footer class="container-fluid p-0 fixed-bottom">
+            <img src="assets/images/banner-home.svg" class="w-100" alt="">
+        </footer> 
+        
+        <script src="assets/js/jquery-4.0.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            /* ********** Lightpicker ********** */
+            new Litepicker({
+                element: document.getElementById('calendario'),
+                minDate: new Date(),
+                inlineMode: true,
+                singleMode: false,
+                numberOfMonths: 3,
+                numberOfColumns: 1,
+                lang: 'es-ES',
+                buttonText: {
+                    previousMonth: '←',
+                    nextMonth: '→',
+                    apply: 'Aplicar',
+                    cancel: 'Cancelar',
+                    reset: 'Reiniciar'
+                },
+
+                tooltipText: {
+                    one: 'día',
+                    other: 'días'
+                },
+
+                tooltipNumber: (totalDays) => {
+                    return totalDays;
+                }
+            });
+            
+            // Funciones para botones de pasajeros
+            $(document).ready(function(){
+                var total_ad    = 0;
+                var total_ni    = 0;
+                var total_ina   = 0;
+                var total_est   = 0;
+                var total_mae   = 0;
+                
+                $("#total_ad").val(total_ad); 
+                $("#total_ni").val(total_ni); 
+                $("#total_ina").val(total_ina); 
+                $("#total_est").val(total_est); 
+                $("#total_mae").val(total_mae); 
+                
+               
+                
+                /* *******************************
+                    Deshabilitar botón de menos(-) cuando la cantidad de boletos llega a cero 
+                */
+                function disableButton() {
+                    $("#dec_ad").prop("disabled", total_ad <= 0);
+                    $("#dec_ni").prop("disabled", total_ni <= 0);
+                    $("#dec_ina").prop("disabled", total_ina <= 0);
+                    $("#dec_est").prop("disabled", total_est <= 0);
+                    $("#dec_mae").prop("disabled", total_mae <= 0);
+                }
+                
+                /* *******************************
+                    Cuando la cantidad de boletos llega a cero, se aplica un text-muted a dicho cero, cuando la cantidad es mayor, se agrega un color negro 
+                */
+                function changeColor(){
+                    if(total_ad <= 0){
+                        $("#total_ad").addClass("text-muted");
+                    }else{
+                        $("#total_ad").removeClass("text-muted");
+                        $("#total_ad").addClass("fblack"); 
+                    }              
+                    
+                    if(total_ni <= 0){
+                        $("#total_ni").addClass("text-muted");
+                    }else{
+                        $("#total_ni").removeClass("text-muted");
+                        $("#total_ni").addClass("fblack"); 
+                    }
+                    
+                    if(total_ina <= 0){
+                        $("#total_ina").addClass("text-muted");
+                    }else{
+                        $("#total_ina").removeClass("text-muted");
+                        $("#total_ina").addClass("fblack"); 
+                    }
+                    
+                    if(total_est <= 0){
+                        $("#total_est").addClass("text-muted");
+                    }else{
+                        $("#total_est").removeClass("text-muted");
+                        $("#total_est").addClass("fblack"); 
+                    }
+                    
+                    if(total_mae <= 0){
+                        $("#total_mae").addClass("text-muted");
+                    }else{
+                        $("#total_mae").removeClass("text-muted");
+                        $("#total_mae").addClass("fblack"); 
+                    }
+                }
+
+                /* Click Botones más/menos */
+                $("#inc_ad").click(function(){
+                    total_ad++;
+                    $("#total_ad").val(total_ad);
+                    disableButton();
+                    changeColor();
+                });
+                $("#dec_ad").click(function(){
+                    if (total_ad > 0) { 
+                        total_ad--;
+                        $("#total_ad").val(total_ad);
+                        disableButton();
+                        changeColor();
+                    }     
+                });
+                
+                $("#inc_ni").click(function(){
+                    total_ni++;
+                    $("#total_ni").val(total_ni);
+                    disableButton();
+                    changeColor();
+                });
+                $("#dec_ni").click(function(){
+                    if (total_ni > 0) { 
+                        total_ni--;
+                        $("#total_ni").val(total_ni);
+                        disableButton();
+                        changeColor();
+                    }       
+                });
+                
+                $("#inc_ina").click(function(){
+                    total_ina++;
+                    $("#total_ina").val(total_ina);
+                    disableButton();
+                    changeColor();
+                });
+                $("#dec_ina").click(function(){
+                    if (total_ina > 0) { 
+                        total_ina--;
+                        $("#total_ina").val(total_ina);
+                        disableButton();
+                        changeColor();
+                    }       
+                });
+                
+                $("#inc_est").click(function(){
+                    total_est++;
+                    $("#total_est").val(total_est);
+                    disableButton();
+                    changeColor();
+                });
+                $("#dec_est").click(function(){
+                    if (total_est > 0) { 
+                        total_est--;
+                        $("#total_est").val(total_est);
+                        disableButton();
+                        changeColor();
+                    }       
+                });
+                
+                $("#inc_mae").click(function(){
+                    total_mae++;
+                    $("#total_mae").val(total_mae);
+                    disableButton();
+                    changeColor();
+                });
+                $("#dec_mae").click(function(){
+                    if (total_mae > 0) { 
+                        total_mae--;
+                        $("#total_mae").val(total_mae);
+                        disableButton();
+                        changeColor();
+                    }       
+                });
+                                                
+                disableButton();
+            });
+        </script>
+    </body>
+</html>
