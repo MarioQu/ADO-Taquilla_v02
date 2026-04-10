@@ -34,9 +34,9 @@
         
         <!-- Borrar -->
         <div>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlertInapam">Alert 1</button>
-            
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlertInapam">Alert 1</button>            
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAsientosOcupados">Alert 2</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalImportante">Alert 3</button>
         </div>
         <!-- Borrar -->
         
@@ -305,7 +305,7 @@
         <!-- Modal INAMAP Alert -->
         <div class="modal fade" id="modalAlertInapam" tabindex="-1" aria-labelledby="modalAlertInapamLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content rad20">
+                <div class="modal-content rad20 py-4">
                     <div class="modal-header justify-content-center align-items-center flex-column">
                         <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
                         <h5 class="f-40 fw-700 text-center" id="modalAlertInapamLabel">Importante</h5>
@@ -337,7 +337,7 @@
         <!-- Modal Asientos Ocupados -->
         <div class="modal fade" id="modalAsientosOcupados" tabindex="-1" aria-labelledby="modalAsientosOcupadosLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content rad20">
+                <div class="modal-content rad20 py-4">
                     <div class="modal-header justify-content-center align-items-center flex-column">
                         <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
                         <h5 class="f-40 fw-700 text-center" id="modalAsientosOcupadosLabel">Asientos Ocupados</h5>
@@ -355,6 +355,38 @@
                             <div class="row">
                                 <div class="col-12 pt-3">
                                     <button type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Importante -->
+        <div class="modal fade" id="modalImportante" tabindex="-1" aria-labelledby="modalImportantesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content rad20 py-4">
+                    <div class="modal-header justify-content-center align-items-center flex-column">
+                        <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
+                        <h5 class="f-40 fw-700 text-center" id="modalImportantesLabel">Importante</h5>
+                    </div>
+                    
+                    <div class="modal-body pt-5">
+                        <p class="f-24 text-center p-3">
+                            Al regresar se perderán los <br> asientos que agregaste.
+                        </p>
+                    </div>
+                                        
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Si, regresar</button>
+                                </div>
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">No, cancelar</button>
                                 </div>
                             </div>
                         </div>
