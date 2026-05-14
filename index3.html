@@ -31,7 +31,7 @@
         <audio src="assets/audios/autobus-ida.mp3" autoplay id="autobus-ida"></audio>
         
         <section class="container-lg px-5" style="background-color: #F1F3F9;">
-            <div class="row pt-4 pb-3">
+            <div class="row py-5">
                 <div class="col-6">
                     <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Editar búsqueda
@@ -48,28 +48,28 @@
                 <div class="col-12 px-0">
                     <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4 active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true">
                                 <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="boletos-off me-2">
                                 <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="boletos-on d-none me-2">
                                 Elegir boletos
                             </button>
                         </li>
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false">
                                 <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="asientos-off me-2"> 
                                 <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on d-none me-2">
                                 Asientos
                             </button>
                         </li>
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
                                 <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
                                 <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
                                 Registro
                             </button>
                         </li>
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
                                 <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
                                 <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
                                 Pago
@@ -78,28 +78,20 @@
                     </ul>
                     
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- boletos-pane -->
-                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- asientos-pane -->
-                        
-                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- registro-pane -->
-                        
-                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- pago-pane -->
+                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0"></div><!-- boletos-pane -->                        
+                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0"></div><!-- asientos-pane -->                        
+                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0"></div><!-- registro-pane -->                        
+                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0"></div><!-- pago-pane -->
                     </div>
                 </div>                
             </div>
             
-            <div class="row green-div1 py-4 px-3 d-flex align-items-center justify-content-between">
-                <div class="col-12">
-                    <p class="m-0 p-0 fblack f-24 fw-700">Elige tu boleto de ida <span class="f-purple">Lunes 23 de marzo 6:30h</span></p>
+            <div class="row green-div1 py-5 px-3 d-flex align-items-center justify-content-between">
+                <div class="col-6">
+                    <p class="m-0 p-0 fblack f-24 fw-700">Elige tu boleto de ida </p>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="f-purple f-24 fw-700">Lunes 23 de marzo</span>
                 </div>
                 <!--<div class="col text-end">
                     <button class="btn white-btn" data-bs-toggle="modal" data-bs-target="#ModalFiltro">
@@ -174,7 +166,7 @@
                                         <li class="d-flex align-items-center justify-content-start mb-4">
                                             <img src="assets/images/iconos-logos/asientos.svg" alt="" class="me-3" style="width: 40px;"> 
                                             <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
-                                                Asientos<br>reclinables
+                                                Asientos reclinables
                                             </p>
                                         </li>
                                         <li class="d-flex align-items-center justify-content-start">
@@ -190,14 +182,14 @@
                                         <li class="d-flex align-items-center justify-content-start mb-4">
                                             <img src="assets/images/iconos-logos/equipaje.svg" alt="" class="me-3" style="width: 40px;"> 
                                             <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
-                                                Hasta 25kg de<br>equipaje <br>
+                                                Hasta 25kg de equipaje <br>
                                                 <small style="font-size: 70%;">Sin costo</small>
                                             </p>
                                         </li>
                                         <li class="d-flex align-items-center justify-content-start mb-4">
                                             <img src="assets/images/iconos-logos/conexiones.svg" alt="" class="me-3" style="width: 40px;"> 
                                             <p class="f-16 mb-0 pb-0" style="line-height: 18px; font-weight: 500;">
-                                                Conexiones<br>eléctricas
+                                                Conexiones eléctricas
                                             </p>
                                         </li>
                                         <li class="d-flex align-items-center justify-content-start">
@@ -412,7 +404,7 @@
                         </div>               
                     </div><!-- /row corridas -->
                     
-                    <div class="row shadow corridasBox-bottom py-2" style="background-color: #ECEFF6;">
+                    <div class="row shadow corridasBox-bottom py-4" style="background-color: #ECEFF6;">
                         <div class="col-8 d-flex align-items-center justify-content-end">
                             <ul class="d-flex align-items-center justify-content-center p-0 m-0  list-borders1">
                                 <li class="me-2 pe-2">
@@ -462,7 +454,7 @@
                         </div>               
                     </div><!-- /row corridas -->
                     
-                    <div class="row shadow corridasBox-bottom py-2" style="background-color: #ECEFF6;">
+                    <div class="row shadow corridasBox-bottom py-4" style="background-color: #ECEFF6;">
                         <div class="col-8 d-flex align-items-center justify-content-end">
                             <ul class="d-flex align-items-center justify-content-center p-0 m-0  list-borders1">
                                 <li class="me-2 pe-2">
@@ -483,7 +475,7 @@
             `;
 
             
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 3; i++) {
                 corridas.innerHTML += bloqueHTML; 
             }
         </script>

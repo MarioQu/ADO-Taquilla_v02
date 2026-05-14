@@ -72,26 +72,26 @@
                                                 <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
                                             </div>
                                             
-                                            <div class="col-12">
+                                            <!-- <div class="col-12">
                                                 <div class="alert alert-warning rad20 text-center py-2" role="alert" style="background-color: #FFF1DB; border: 1px solid #D1820B;">
                                                     <img src="assets/images/alert.svg" alt=""> Es necesario un correo electrónico para el envío de tus boletos.
                                                 </div>  
-                                            </div>
+                                            </div> -->
                                             
                                             <div class="col-12 mt-3 faback shadow rad16">
                                                 <form action="" class="">
                                                     <div class="row px-3 py-4">                                        
                                                         <div class="col-6">
                                                             <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567" data-audio="assets/audios/ingresa-correo.mp3">
+                                                            <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
                                                         </div>
                                                         <div class="col-6">
                                                             <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none is-valid" id="email" value="300 123 456">
+                                                            <input type="text" class="form-control fblack txt18 shadow-none is-valid" id="email" value="300 123 4567 o correo@gmail.com">
                                                             <div class="invalid-feedback">El correo no coincide</div>
                                                         </div>                                                                    
                                                     </div>
-                                                    <div class="row px-3 pb-4">                                        
+                                                    <!-- <div class="row px-3 pb-4">                                        
                                                         <div class="col-6">
                                                             <label for="email" class="txt16 mb-1 f500">Correo electrónico</label>
                                                             <input type="email" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" placeholder="Ej: nombre@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
@@ -101,7 +101,7 @@
                                                             <input type="email" class="form-control fblack txt18 shadow-none is-invalid" id="email" placeholder="Ej: nombre@gmail.com">
                                                             <div class="invalid-feedback">El correo no coincide</div>
                                                         </div>                                                                    
-                                                    </div>
+                                                    </div> -->
                                                 </form>
                                             </div>
                                         </div>
@@ -267,7 +267,7 @@
                 <div class="row green-div2 py-4 px-3" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
                     <div class="col">
                         <span class="fblack f-28 fw-700">Total</span>
-                        <span class="fblack f-14 fw-400">(Incluye IVA)</span>
+                        <span class="fblack f-20 fw-400">(Incluye IVA)</span>
                     </div>
                     <div class="col text-end">
                         <span class="f-green1 f-28 fw-700">$2,478.00 MXN</span>
@@ -290,9 +290,10 @@
         <div class="modal fade modal-bottom" id="modalAsistencia" tabindex="-1" aria-labelledby="modalAsistenciaLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content p-5 rounded-lg">
-                    <div class="modal-header justify-content-center">
-                        <h5 class="f-40 fw-700" id="modalAsistenciaLabel">¿Qué es asistencia total?</h5>
-                    </div>
+                    <div class="modal-header align-items-center justify-content-between">                        
+                        <h5 class="f-24 fw-700" id="modalAsistenciaLabel">Asistencia total</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>                    
                     
                     <div class="modal-body pt-5">
                         <p class="f-24">
@@ -302,17 +303,12 @@
                             Con este servicio puedes obtener asistencia médica, legal, funeraria, red de descuentos y otros servicios que puedas requerir. Estos beneficios tienen una cobertura de acuerdo a la vigencia que adquieras, la vigencia inicia una vez que llegaste a tu destino.
                         </p>
                         <p class="f-24">
-                            El cupón color azul es de 7 días y el cupón color negro es de 24 horas. Para mayor información ingresa a <a href="https://asistenciatotal.app/index.html" target="_blank" class="fpurple">asistenciatotal.app</a> o comunícate al <a href="tel:8000300236" target="_blank" class="fpurple">800 0300 236</a>.
+                            Para hacer válido tu seguro de Asistencia Total debes conservar el boleto de tu viaje, ya que te lo solicitarán cuando te comuniques.
                         </p>
                         <p class="f-24">
-                            Para hacer válido tu seguro de Asistencia Total debes conservar el boleto de tu viaje, ya que te lo solicitarán cuando te comuniques.
-                            Los servicios sólo son aplicables al haber descendido del autobús en la terminal de la ciudad destino marcada en tu boleto.
+                            Los servicios sólo son aplicables al haber descendido del autobús en la terminal de la ciudad destino marcada en tu boleto.
                         </p>
-                    </div>
-                                        
-                    <div class="modal-footer border-0">
-                        <button type="button" class="btn purple-btn w-100 py-4 f-24 shadow-none" data-dismiss="modal">Aceptar</button>
-                    </div>
+                    </div>                                
                 </div>
             </div>
         </div>

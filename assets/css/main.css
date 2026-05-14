@@ -421,13 +421,6 @@ ul{
 .litepicker .container__days .day-item.is-locked{
     color: #B5BAC7;
 }
-.container__days .day-item:nth-child(10){
-    background-color: #D1820B !important;
-    color: #fff !important;
-}.container__days .day-item:nth-child(19){
-    background-color: #87CE77 !important;
-    color: #fff !important;
-}
 
 /* Modal Viajantes */
 #modal-pasajeros .icon-viajeros{
