@@ -279,7 +279,7 @@ ul{
 }.ida_regreso .form-check-input[type=radio] {
     border-radius: 0;
     width: 100%;
-    height: 30px;
+    height: 40px;
     margin-top: -2px;
 }.ida_regreso .form-check-input:checked {
     background-color: var(--purple1);
@@ -328,11 +328,13 @@ ul{
 #accordionTerminales .accordion-header,
 #accordionTerminales .accordion-header button{
     background-color: #FAFAFA;
+    font-size: 20px;
 }
 .subaccordions,
 .subaccordions button,
 .subaccordions .accordion-body{
     background-color: #F1F3F9 !important;
+    font-size: 20px;
 }
 .subaccordions button:hover{
     background-color: var(--purple1) !important;

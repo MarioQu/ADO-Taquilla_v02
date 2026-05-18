@@ -17,42 +17,31 @@
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }
-            /* CONTENEDOR GENERAL */
-.litepicker {
-    width: 100% !important;
-}
-.litepicker .container__main{
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-/* MESES */
-.litepicker .month-item {
-    width: 500px !important;
-    max-width: 100% !important;
-    
-}
-
-/* TÍTULO */
-.litepicker .month-item-name,
-.litepicker .month-item-year {
-    font-size: 32px !important;
-    font-weight: bold;
-}
-
-/* NOMBRES DE DÍAS */
-.litepicker .month-item-weekdays-row > div {
-    font-size: 14px !important;
-    padding: 10px 0 !important;
-}
-
-/* DÍAS */
-.litepicker .day-item {
-    font-size: 16px !important;
-    padding: 12px !important;
-}
-            
-
+            .litepicker {
+                width: 100% !important;
+            }
+            .litepicker .container__main{
+                justify-content: center !important;
+                align-items: center !important;
+            }
+            .litepicker .month-item {
+                width: 500px !important;
+                max-width: 100% !important;
+                
+            }
+            .litepicker .month-item-name,
+            .litepicker .month-item-year {
+                font-size: 32px !important;
+                font-weight: bold;
+            }
+            .litepicker .month-item-weekdays-row > div {
+                font-size: 14px !important;
+                padding: 10px 0 !important;
+            }
+            .litepicker .day-item {
+                font-size: 16px !important;
+                padding: 12px !important;
+            }            
         </style>
     </head>
     
@@ -63,7 +52,7 @@
         
         <section class="container-lg px-5">
             <div class="row mt-3 mb-3">
-                <div class="col-6 offset-6 text-end f-18 f-white fw-600 pb-2">
+                <div class="col-6 offset-6 text-end f-20 f-white fw-600 pb-3">
                     23 de Marzo 6:30 h
                 </div>                
                 <div class="col-5">
@@ -85,7 +74,7 @@
             
             <div class="row white-opacity-cont rad20 shadow px-4 pt-3">
                 <div class="col-12">
-                    <p class="f-32 f-black text-center fw-600 ">¿A dónde quieres viajar?</p>
+                    <p class="f-24 f-black text-center fw-600 ">¿A dónde quieres viajar?</p>
                     
                     <div class="row whiteback rad20 p-4 shadow">
                         <form action="">
@@ -93,37 +82,37 @@
                                 <div class="col-12 form-group d-flex align-items-center ida_regreso p-0" style="border: 5px solid #E9E9E9; border-radius: 4px;">                                    
                                     <div class="custom-radio w-100">
                                         <input class="form-check-input shadow-none" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                        <label class="form-check-label text-center" for="inlineRadio1">Ida y regreso</label>
+                                        <label class="form-check-label text-center mt-2" for="inlineRadio1">Ida y regreso</label>
                                     </div>
                                     <div class="custom-radio w-100">
                                         <input class="form-check-input shadow-none" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                        <label class="form-check-label text-center" for="inlineRadio2">Solo ida</label>
+                                        <label class="form-check-label text-center mt-2" for="inlineRadio2">Solo ida</label>
                                     </div>                                    
                                 </div>
                             </div>
                             
                             <div class="row mt-4">
                                 <div class="col">
-                                    <label for="origen" class="form-label mb-1 f-18">Origen</label>
+                                    <label for="origen" class="form-label mb-1 f-16">Origen</label>
                                     <input type="text" class="form-control audio-field" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen" data-audio="assets/audios/de-donde-sales.mp3">
                                 </div>
                                 <div class="col">
-                                    <label for="destino" class="form-label mb-1 f-18">Destino</label>
+                                    <label for="destino" class="form-label mb-1 f-16">Destino</label>
                                     <input type="text" class="form-control audio-field" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
                                 </div>                                
                             </div><!-- row -->
                             
                             <div class="row mt-4">
                                 <div class="col">
-                                    <label for="ida" class="form-label f-18 mb-1">Fecha de ida</label>
+                                    <label for="ida" class="form-label f-16 mb-1">Fecha de ida</label>
                                     <input type="text" class="form-control audio-field" id="ida" placeholder="Lun. 23 de marzo" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-ida.mp3">
                                 </div>
                                 <div class="col">
-                                    <label for="regreso" class="form-label f-18 mb-1">Fecha de regreso</label>
+                                    <label for="regreso" class="form-label f-16 mb-1">Fecha de regreso</label>
                                     <input type="text" class="form-control audio-field" id="regreso" placeholder="¿Cuándo regresas?" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-regreso.mp3">
                                 </div>
                                 <div class="col">
-                                    <label for="pasajeros" class="form-label f-18 mb-1">Pasajeros</label>
+                                    <label for="pasajeros" class="form-label f-16 mb-1">Pasajeros</label>
                                     <input type="text" class="form-control" id="pasajeros" placeholder="1 adulto" data-bs-toggle="modal" data-bs-target="#modal-pasajeros">
                                 </div>
                             </div><!-- row -->
@@ -139,15 +128,15 @@
                 </div><!-- col-12 -->
                 
                 
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-4">
                     <span class="fw-600 f-24 fblack">Terminales Frecuentes</span>
                     
-                    <div class="row mt-3">
+                    <div class="row mt-4">
                         <div class="col-4 mb-4">
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/puebla.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">Puebla CAPU, Pue.</h5>
+                                    <h5 class="f-16 fw-600">Puebla CAPU, Pue.</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -159,7 +148,7 @@
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/san-martin.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">San Martín</h5>
+                                    <h5 class="f-16 fw-600">San Martín</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -171,7 +160,7 @@
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/xalapa.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">Xalapa, Ver.</h5>
+                                    <h5 class="f-16 fw-600">Xalapa, Ver.</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -183,7 +172,7 @@
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/tehuacan.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">Tehuacán</h5>
+                                    <h5 class="f-16 fw-600">Tehuacán</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -195,7 +184,7 @@
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/oaxaca.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">Oaxaca</h5>
+                                    <h5 class="f-16 fw-600">Oaxaca</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -207,7 +196,7 @@
                             <div class="card card-destino rad16 shadow">
                                 <img src="assets/images/veracruz.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
-                                    <h5 class="f20 fw-600">Veracruz</h5>
+                                    <h5 class="f-16 fw-600">Veracruz</h5>
                                     <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
@@ -227,7 +216,7 @@
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
                     <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
-                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
@@ -235,7 +224,7 @@
                     <div class="modal-body faback">
                         <div class="container-fluid">
                             <div class="col-12">
-                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Origen ¿de dónde sales?</h5>                                      
+                                <h5 class="txt-left f-24 fblack fw-700 pb-0">Origen ¿de dónde sales?</h5>                                      
                             </div>
                             <div class="row">                                
                                 <div class="col-12">
@@ -244,7 +233,7 @@
                                     <hr class="separador">
                                 </div>
                                 <div class="col-12" style="background-color: #fff;">
-                                    <h5 class="txt-left f-32 fblack fw-700 pb-0">Terminales</h5>                                      
+                                    <h5 class="txt-left f-24 fblack fw-700 pb-0">Terminales</h5>                                      
                                 </div>
                             </div>
                             
@@ -527,10 +516,10 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4">Continuar</button>
                                 </div>
                             </div>
                         </div>
@@ -547,7 +536,7 @@
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
                     <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
-                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
@@ -555,7 +544,7 @@
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="col-12">
-                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Destino ¿a dónde vas?</h5>                                      
+                                <h5 class="txt-left f-24 fblack fw-700 pb-0">Destino ¿a dónde vas?</h5>                                      
                             </div>
                             <div class="row">                                
                                 <div class="col-12">
@@ -564,7 +553,7 @@
                                     <hr class="separador">
                                 </div>
                                 <div class="col-12">
-                                    <h5 class="txt-left f-32 fblack fw-700 pb-0">Terminales</h5>                                      
+                                    <h5 class="txt-left f-24 fblack fw-700 pb-0">Terminales</h5>                                      
                                 </div>
                             </div>
                             
@@ -573,7 +562,7 @@
                                 <div class="accordion border-0 pt-3" id="accordionDestino" style="border-top: 1px solid #E6E7E7 !important;">
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
                                                 Campeche
                                             </button>
                                         </h2>
@@ -582,7 +571,7 @@
                                                 <div class="accordion border-0 subaccordions" id="subaccordion1">
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none py-0" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
+                                                            <button class="accordion-button collapsed shadow-none py-0 f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
                                                                 Campeche 1
                                                             </button>
                                                         </h2>
@@ -594,7 +583,7 @@
                                                     </div><!-- subaccordion-item -->
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
                                                                 Campeche 2
                                                             </button>
                                                         </h2>
@@ -611,7 +600,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
                                                 Chiapas
                                             </button>
                                         </h2>
@@ -624,7 +613,7 @@
                                  
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
                                                 Ciudad de México
                                             </button>
                                         </h2>
@@ -637,7 +626,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
                                                 Estado de México
                                             </button>
                                         </h2>
@@ -650,7 +639,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
                                                 Guerrero
                                             </button>
                                         </h2>
@@ -663,7 +652,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
                                                 Hidalgo
                                             </button>
                                         </h2>
@@ -672,7 +661,7 @@
                                                 <div class="accordion border-0 subaccordions" id="subaccordion2">
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsTres" aria-expanded="false" aria-controls="subCollapsTres">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsTres" aria-expanded="false" aria-controls="subCollapsTres">
                                                                 Pachuca de Soto, Hgo.
                                                             </button>
                                                         </h2>
@@ -684,7 +673,7 @@
                                                     </div><!-- subaccordion-item -->
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCuatro" aria-expanded="false" aria-controls="subCollapsCuatro">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCuatro" aria-expanded="false" aria-controls="subCollapsCuatro">
                                                                 Tulancingo, Hgo.
                                                             </button>
                                                         </h2>
@@ -696,7 +685,7 @@
                                                     </div>                                                   
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
                                                                 Apan, Hgo.
                                                             </button>
                                                         </h2>
@@ -708,7 +697,7 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
                                                                 Ciudad Sahagún, Hgo.
                                                             </button>
                                                         </h2>
@@ -720,7 +709,7 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
                                                                 Zacualtipán, Hgo.
                                                             </button>
                                                         </h2>
@@ -737,7 +726,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
                                                 Morelos
                                             </button>
                                         </h2>
@@ -750,7 +739,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
                                                 Oaxaca
                                             </button>
                                         </h2>
@@ -763,7 +752,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
                                                 Puebla
                                             </button>
                                         </h2>
@@ -776,7 +765,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
                                                 Quintana Roo
                                             </button>
                                         </h2>
@@ -789,7 +778,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
                                                 Tabasco
                                             </button>
                                         </h2>
@@ -802,7 +791,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
                                                 Tlaxcala
                                             </button>
                                         </h2>
@@ -815,7 +804,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
                                                 Veracruz
                                             </button>
                                         </h2>
@@ -828,7 +817,7 @@
                                     
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
+                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
                                                 Yucatán
                                             </button>
                                         </h2>
@@ -847,10 +836,10 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4">Continuar</button>
                                 </div>
                             </div>
                         </div>
@@ -866,16 +855,16 @@
         <div class="modal fade modalFull" id="modal-fechas" tabindex="-1" aria-labelledby="modal-fechasLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
-                    <div class="modal-header norad d-flex align-items-center justify-content-between p-4">
-                        <button class="btn white-btn btnRegresar1 py-1 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between p-4" style="background-color: #FAFBFD;">
+                        <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
                     </div>
                     <div class="modal-body px-0">
-                        <div class="container-fluid px-0 faback">
+                        <div class="container-fluid px-0" style="background-color: #FAFBFD;">
                             <div class="col-12 px-4">
-                                <h5 class="txt-left f-32 fblack fw-700 pb-0">Elige tus fechas de ida y regreso</h5>                                      
+                                <h5 class="txt-left f-24 fblack fw-700 pb-0 px-3">Elige tus fechas de ida y regreso</h5>                                      
                             </div>                           
                         </div>
                         <div class="container-fluid px-0 mt-3">
@@ -888,7 +877,7 @@
                     </div>
                     <div class="modal-footer fixed-bottom py-3" style="background-color: #F1F3F9;">
                         <div class="container-fluid">
-                            <div class="row mb-3">
+                            <div class="row py-4">
                                 <div class="col-12">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="checkDefault">
@@ -900,10 +889,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Regresar</button>                        
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-3">Continuar</button>
+                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-4">Continuar</button>
                                 </div>
                             </div>
                         </div>
