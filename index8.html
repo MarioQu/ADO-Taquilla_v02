@@ -15,8 +15,8 @@
     </head>
     
     <body>
-        <section class="container-lg px-5" style="background-color: #F1F3F9;">
-            <div class="row pt-4 pb-3">
+        <section class="container-lg px-5">
+            <div class="row pt-5 pb-5 pb-3">
                 <div class="col-4">
                     <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
@@ -35,19 +35,19 @@
                 <div class="col-12 px-0 mt-3">
                     <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true" style="border-bottom: 3px solid #258910 !important;">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true" style="border-bottom: 3px solid #258910 !important;">
                                 <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="boletos me-2">
                                 Elegir boletos
                             </button>
                         </li>
                         <li class="nav-item border-0" role="presentation">
                             <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on me-2">
+                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="asientos-on me-2">
                                 Asientos
                             </button>
                         </li>
                         <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
+                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
                                 <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
                                 <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
                                 Registro
@@ -63,7 +63,15 @@
                     </ul>
                     
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
+                        <div class="tab-pane fade" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- boletos-pane -->
+                        
+                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
+                            &nbsp;
+                        </div><!-- asientos-pane -->
+                        
+                        <div class="tab-pane fade show active" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
@@ -244,14 +252,6 @@
                                     </div><!-- col-12 enviar boletos -->
                                 </div>
                             </div>
-                        </div><!-- boletos-pane -->
-                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- asientos-pane -->
-                        
-                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
-                            &nbsp;
                         </div><!-- registro-pane -->
                         
                         <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">

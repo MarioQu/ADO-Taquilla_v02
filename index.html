@@ -41,7 +41,41 @@
             .litepicker .day-item {
                 font-size: 16px !important;
                 padding: 12px !important;
-            }            
+            }      
+            .accordion-button::after {
+                width: 40px;
+                height: 40px;
+            }
+            .accordion-button:not(.collapsed)::after {
+                background-image: url("assets/images/chevron-up.png") !important;
+                background-size: 40px !important;
+                transform: var(--bs-accordion-btn-icon-transform);
+            }
+            .search-icon, 
+            .destino-icon{
+                position:absolute;
+                top:50%;
+                right:15px;
+                transform:translateY(-50%);
+                cursor:pointer;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+            .search-icon img,
+            .destino-icon img{
+                width:20px;
+                height:20px;
+                object-fit:contain;
+            }
+            #terminal-origen,
+            #terminal-destino{
+                border:none !important;
+            }
+            #terminal-origen:focus,
+            #terminal-destino:focus{
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            }
         </style>
     </head>
     
@@ -227,9 +261,12 @@
                                 <h5 class="txt-left f-24 fblack fw-700 pb-0">Origen ¿de dónde sales?</h5>                                      
                             </div>
                             <div class="row">                                
-                                <div class="col-12">
+                                <div class="col-12" style="position: relative;">
                                     <hr class="separador">
-                                    <input type="text" class="form-control rad16 search" placeholder="Encuentra terminal de origen"> 
+                                    <input type="text" class="form-control rad16 search" id="terminal-origen" placeholder="Encuentra terminal de origen"> 
+                                    <span id="searchIcon" class="search-icon">
+                                        <img src="assets/images/iconos-logos/search.svg" style="width: 20px;">
+                                    </span>                               
                                     <hr class="separador">
                                 </div>
                                 <div class="col-12" style="background-color: #fff;">
@@ -377,11 +414,11 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsSeis" aria-expanded="false" aria-controls="subCollapsSeis">
                                                                 Ciudad Sahagún, Hgo.
                                                             </button>
                                                         </h2>
-                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                        <div id="subCollapsSeis" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
                                                             <div class="accordion-body">
                                                                 Lorem...
                                                             </div>
@@ -389,11 +426,11 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsSiete" aria-expanded="false" aria-controls="subCollapsSiete">
                                                                 Zacualtipán, Hgo.
                                                             </button>
                                                         </h2>
-                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                        <div id="subCollapsSiete" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
                                                             <div class="accordion-body">
                                                                 Lorem...
                                                             </div>
@@ -519,7 +556,7 @@
                                     <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <button type="button" class="btn disabled-btn w-100 f-24 rad16 py-4">Continuar</button>
                                 </div>
                             </div>
                         </div>
@@ -547,9 +584,14 @@
                                 <h5 class="txt-left f-24 fblack fw-700 pb-0">Destino ¿a dónde vas?</h5>                                      
                             </div>
                             <div class="row">                                
-                                <div class="col-12">
+                                <div class="col-12" style="position: relative;">
                                     <hr class="separador">
-                                    <input type="text" class="form-control rad16 search" placeholder="Encuentra una terminal"> 
+                                    <input type="text" class="form-control rad16 search" id="terminal-destino" placeholder="Encuentra una terminal">                                     
+                                    <span id="destinoIcon" class="destino-icon">
+                                        <img src="assets/images/iconos-logos/search.svg" style="width: 20px;">
+                                    </span>              
+                                    
+                                    
                                     <hr class="separador">
                                 </div>
                                 <div class="col-12">
@@ -697,11 +739,11 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsSeis" aria-expanded="false" aria-controls="subCollapsSeis">
                                                                 Ciudad Sahagún, Hgo.
                                                             </button>
                                                         </h2>
-                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                        <div id="subCollapsSeis" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
                                                             <div class="accordion-body">
                                                                 Lorem...
                                                             </div>
@@ -709,11 +751,11 @@
                                                     </div>
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsCinco" aria-expanded="false" aria-controls="subCollapsCinco">
+                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsSiete" aria-expanded="false" aria-controls="subCollapsSiete">
                                                                 Zacualtipán, Hgo.
                                                             </button>
                                                         </h2>
-                                                        <div id="subCollapsCinco" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
+                                                        <div id="subCollapsSiete" class="accordion-collapse collapse" data-bs-parent="#subaccordion2">
                                                             <div class="accordion-body">
                                                                 Lorem...
                                                             </div>
@@ -862,12 +904,12 @@
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
                     </div>
                     <div class="modal-body px-0">
-                        <div class="container-fluid px-0" style="background-color: #FAFBFD;">
+                        <div class="container-fluid px-0 py-4" style="background-color: #FAFBFD;">
                             <div class="col-12 px-4">
                                 <h5 class="txt-left f-24 fblack fw-700 pb-0 px-3">Elige tus fechas de ida y regreso</h5>                                      
                             </div>                           
                         </div>
-                        <div class="container-fluid px-0 mt-3">
+                        <div class="container-fluid px-0">
                             <div class="row">                                
                                 <div class="col-12 text-center pt-4">
                                     <div id="calendario"></div>
@@ -892,7 +934,8 @@
                                     <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn gray1-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <button type="button" class="btn disabled-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <!-- Para que el botón se muestre como activo, cambiar la clase disabled-btn por "purple-btn" -->
                                 </div>
                             </div>
                         </div>
@@ -980,7 +1023,7 @@
                         <div class="container-fluid">                            
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="index2.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar</a>                        
+                                    <a href="index2.html" type="button" class="btn disabled-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar</a>                        
                                 </div>
                             </div>
                         </div>
@@ -1138,6 +1181,63 @@
                     return totalDays;
                 }
             });
+            
+            
+            const input = document.getElementById('terminal-origen');
+            const icon = document.getElementById('searchIcon');
+            const searchIcon = 'assets/images/iconos-logos/search.svg';
+            const closeIcon = 'assets/images/iconos-logos/close.svg';
+
+            input.addEventListener('input', function(){
+                if(this.value.length > 0){
+                    icon.innerHTML = `
+                        <img src="${closeIcon}" alt="Limpiar">
+                    `;
+                }else{
+                    icon.innerHTML = `
+                        <img src="${searchIcon}" alt="Buscar">
+                    `;
+                }
+            });
+
+            icon.addEventListener('click', function(){
+                if(input.value.length > 0){
+                    input.value = '';
+                    icon.innerHTML = `
+                        <img src="${searchIcon}" alt="Buscar">
+                    `;
+                    input.focus();
+                }
+            });
+            
+            const input2 = document.getElementById('terminal-destino');
+            const icon2 = document.getElementById('destinoIcon');
+            const destinoIcon = 'assets/images/iconos-logos/search.svg';
+            const closeIcon2 = 'assets/images/iconos-logos/close.svg';
+
+            input2.addEventListener('input', function(){
+                if(this.value.length > 0){
+                    icon2.innerHTML = `
+                        <img src="${closeIcon2}" alt="Limpiar">
+                    `;
+                }else{
+                    icon2.innerHTML = `
+                        <img src="${destinoIcon}" alt="Buscar">
+                    `;
+                }
+            });
+
+            icon2.addEventListener('click', function(){
+                if(input2.value.length > 0){
+                    input2.value = '';
+                    icon2.innerHTML = `
+                        <img src="${destinoIcon}" alt="Buscar">
+                    `;
+                    input2.focus();
+                }
+            });
+
+
             
             // Funciones para botones de pasajeros
             $(document).ready(function(){
