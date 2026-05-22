@@ -12,10 +12,15 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
         <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
         <title>Document</title>
+        <style>
+            body{
+                background-color: #F1F3F9;
+            }
+        </style>
     </head>
     
     <body>
-        <section class="container-lg px-5">
+        <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row pt-5 pb-5 pb-3">
                 <div class="col-4">
                     <button class="btn fa-btn py-2 px-3 f-16 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
@@ -30,180 +35,169 @@
             </div>
         </section>
         
-        <section class="container-lg whiteback">
-            <div class="row">
+        <section class="container-lg">
+            <div class="row estatus-compra shadow" style="background-color: #F6F7FB;">
+                <div class="col-3 py-4 border-green">
+                    <!-- 
+                        Aquí hay que quitar la clase d-none a la imagen que quieran mostrar y eliminar las demás. 
+                        *** Toda esta parte aplica para las secciones donde se muestra esta barra de búsqueda
+                    -->
+                    <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Elegir boletos</span>
+                </div>
+                <div class="col-3 py-4 border-green">
+                    <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Asientos</span>
+                </div>
+                <div class="col-3 py-4 border-green">
+                    <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Registro</span>
+                </div>
+                <div class="col-3 py-4 border-purple">
+                    <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Pago</span>
+                </div>
+            </div>
+            
+            
+            <div class="row pb-5" style="height: 1200px; overflow-y: scroll;">
                 <div class="col-12 px-0 mt-3">
-                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="boletos me-2">
-                                Elegir boletos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="asientos-on me-2">
-                                Asientos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="registro-off me-2"> 
-                                Registro
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false" style="border-bottom: 3px solid #5F2167 !important;">
-                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on me-2">
-                                Pago
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- boletos-pane -->
-                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- asientos-pane -->
-                        
-                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- registro-pane -->
-                        
-                        <div class="tab-pane fade show active" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
-                                        <div class="row pt-1 faback" style="background-color: #F1F3F9;">
-                                            <div class="col-12">
-                                                <h5 class="fw-600 f-24">Resumen de compra</h5>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
+                                <div class="row pt-1 faback" style="background-color: #F1F3F9;">
+                                    <div class="col-12">
+                                        <h5 class="fw-600 f-24">Resumen de compra</h5>
+                                    </div>
+                                    <div class="col-12 mt-3 faback shadow rad16 py-2 px-3">
+                                        <div class="row px-4 py-3">
+                                            <div class="col-6">
+                                                <span class="f-20 fw-700">Viaje de ida</span>
                                             </div>
-                                            <div class="col-12 mt-3 faback shadow rad16 py-2 px-3">
-                                                <div class="row px-4 py-3">
-                                                    <div class="col-6">
-                                                        <span class="f-20 fw-700">Viaje de ida</span>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <span class="f-20 fw-700">Lunes 23 de Marzo</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row whiteback p-4 corridasBox-top">
-                                                    <div class="col-2 d-flex align-items-center justify-content-center">
-                                                        <img src="assets/images/ADO.svg" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="col-10 border-lx">
-                                                        <div class="row">
-                                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                                            </div>
-                                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>              
-                                                </div><!-- /row corridas -->
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 Adulto</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 niño</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 INAPAM</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">3 Adultos</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
-                                                </div>
+                                            <div class="col-6 text-end">
+                                                <span class="f-20 fw-700">Lunes 23 de Marzo</span>
                                             </div>
                                         </div>
-                                    </div><!-- col-12 enviar boletos -->
-                                    
-                                    <div class="col-12 px-5 py-2" style="background-color: #F1F3F9;">
-                                        <div class="row faback" style="background-color: #F1F3F9;">
-                                            <div class="col-12 faback shadow rad16 py-2 px-3">
-                                                <div class="row px-4 py-3">
-                                                    <div class="col-6">
-                                                        <span class="f-20 fw-700">Viaje de regreso</span>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <span class="f-20 fw-700">Lunes 23 de Marzo</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row whiteback p-4 corridasBox-top">
-                                                    <div class="col-2 d-flex align-items-center justify-content-center">
-                                                        <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="col-10 border-lx">
-                                                        <div class="row">
-                                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                                            </div>
-                                                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>              
-                                                </div><!-- /row corridas -->
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 Adulto</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 niño</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">1 INAPAM</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">3 Adultos</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
-                                                </div>
+                                        <div class="row whiteback p-4 corridasBox-top" >
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/images/ADO.svg" alt="" class="img-fluid">
                                             </div>
+                                            <div class="col-10 border-lx">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>              
+                                        </div><!-- /row corridas -->
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 Adulto</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
                                         </div>
-                                    </div><!-- col-12 enviar boletos -->
-                                    k
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
-                                        <div class="row faback" style="background-color: #F1F3F9;">
-                                            <div class="col-12 faback shadow rad16 py-4 px-3">
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">Subtotal</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$2,490.00 MXN</span></div>
-                                                </div>
-                                                <div class="row my-3 px-4">
-                                                    <div class="col-8"><span class="fw-500 f-24">IVA</span></div>
-                                                    <div class="col-4 text-end"><span class="fw-700 f-24">$384.00 MXN</span></div>
-                                                </div>
-                                                <hr>
-                                                <div class="row green-div2 py-4 px-3 mx-3 rad20" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
-                                                    <div class="col">
-                                                        <span class="fblack f-28 fw-700">Total</span>
-                                                        <span class="fblack f-14 fw-400">(Incluye IVA)</span>
-                                                    </div>
-                                                    <div class="col text-end">
-                                                        <span class="f-green1 f-28 fw-700">$2,478.00 MXN</span>
-                                                    </div>
-                                                </div>                                                
-                                            </div>
-                                        </div>                                        
-                                    </div><!-- col-12 enviar boletos -->
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 niño</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 INAPAM</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">3 Adultos</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- pago-pane -->
+                            </div><!-- col-12 enviar boletos -->
+                            
+                            <div class="col-12 px-5 py-2" style="background-color: #F1F3F9;">
+                                <div class="row faback" style="background-color: #F1F3F9;">
+                                    <div class="col-12 faback shadow rad16 py-2 px-3">
+                                        <div class="row px-4 py-3">
+                                            <div class="col-6">
+                                                <span class="f-20 fw-700">Viaje de regreso</span>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <span class="f-20 fw-700">Lunes 23 de Marzo</span>
+                                            </div>
+                                        </div>
+                                        <div class="row whiteback p-4 corridasBox-top">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="col-10 border-lx">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-between">
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                                    </div>
+                                                </div>
+                                            </div>              
+                                        </div><!-- /row corridas -->
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 Adulto</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$400.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 niño</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">1 INAPAM</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$250.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">3 Adultos</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$45.00 MXN</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- col-12 enviar boletos -->
+                            
+                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
+                                <div class="row faback" style="background-color: #F1F3F9;">
+                                    <div class="col-12 faback shadow rad16 py-4 px-3">
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">Subtotal</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$2,490.00 MXN</span></div>
+                                        </div>
+                                        <div class="row my-3 px-4">
+                                            <div class="col-8"><span class="fw-500 f-24">IVA</span></div>
+                                            <div class="col-4 text-end"><span class="fw-700 f-24">$384.00 MXN</span></div>
+                                        </div>
+                                        <hr>
+                                        <div class="row green-div2 py-4 px-3 mx-3 rad20" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
+                                            <div class="col">
+                                                <span class="fblack f-28 fw-700">Total</span>
+                                                <span class="fblack f-14 fw-400">(Incluye IVA)</span>
+                                            </div>
+                                            <div class="col text-end">
+                                                <span class="f-green1 f-28 fw-700">$2,478.00 MXN</span>
+                                            </div>
+                                        </div>                                                
+                                    </div>
+                                </div>                                        
+                            </div><!-- col-12 enviar boletos -->
+                        </div>
                     </div>
                 </div>                
             </div>
@@ -223,10 +217,38 @@
             </div>
         </footer>
         
-  
-     
-        
-        
+        <!-- Modal INAMAP Alert -->
+        <div class="modal fade" id="modalCancelar" tabindex="-1" aria-labelledby="modalCancelarLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content rad20 pt-4">
+                    <div class="modal-header justify-content-center align-items-center flex-column">
+                        <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
+                        <h5 class="f-24 fw-700 text-center" id="modalCancelarLabel">¿Seguro que deseas <br> cancelar tu compra?</h5>
+                    </div>
+                    
+                    <div class="modal-body pt-3">
+                        <p class="f-24 text-center p-3">
+                            Perderás la información <br>
+                            seleccionada y tendrás que <br>
+                            iniciar nuevamente.
+                        </p>
+                    </div>
+                                        
+                    <div class="modal-footer py-3" style="background-color: #F1F3F9; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 pt-3">
+                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Cancelar compra</button>
+                                </div>
+                                <div class="col-12 pt-3">
+                                    <a href="index7.html" type="button" class="btn purple-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar compra</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
         <audio id="GlobalAudioFields"></audio>

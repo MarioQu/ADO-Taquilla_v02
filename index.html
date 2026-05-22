@@ -17,6 +17,10 @@
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }
+            .litepicker .container__months {
+                background-color: #FAFAFA !important;
+                box-shadow: none !important;
+            }
             .litepicker {
                 width: 100% !important;
             }
@@ -127,11 +131,15 @@
                             <div class="row mt-4">
                                 <div class="col">
                                     <label for="origen" class="form-label mb-1 f-16">Origen</label>
-                                    <input type="text" class="form-control audio-field" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen" data-audio="assets/audios/de-donde-sales.mp3">
+                                    <input type="text" class="form-control audio-field is-valid" id="origen" placeholder="México, Tapo, CDMX" data-bs-toggle="modal" data-bs-target="#modal-origen" data-audio="assets/audios/de-donde-sales.mp3">
+                                    <!-- para inputs con -status ok- poner clase "is-valid" esto aplica para todos los inputs -->
+                                    <!-- para inputs con -status error- poner clase "is-invalid" esto aplica para todos los inputs -->
                                 </div>
                                 <div class="col">
                                     <label for="destino" class="form-label mb-1 f-16">Destino</label>
-                                    <input type="text" class="form-control audio-field" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
+                                    <input type="text" class="form-control audio-field is-invalid" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
+                                    <!-- para inputs con -status ok- poner clase "is-valid" -->
+                                    <!-- para inputs con -status error- poner clase "is-invalid" esto aplica para todos los inputs -->
                                 </div>                                
                             </div><!-- row -->
                             
@@ -170,7 +178,7 @@
                                 <img src="assets/images/puebla.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">Puebla CAPU, Pue.</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -182,7 +190,7 @@
                                 <img src="assets/images/san-martin.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">San Martín</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -194,7 +202,7 @@
                                 <img src="assets/images/xalapa.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">Xalapa, Ver.</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -206,7 +214,7 @@
                                 <img src="assets/images/tehuacan.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">Tehuacán</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -218,7 +226,7 @@
                                 <img src="assets/images/oaxaca.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">Oaxaca</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -230,7 +238,7 @@
                                 <img src="assets/images/veracruz.svg" class="card-img-top" alt="">
                                 <div class="card-body rad16 text-center px-2 faback">
                                     <h5 class="f-16 fw-600">Veracruz</h5>
-                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3" data-toggle="modal" data-target="#modalViajantes">
+                                    <button type="button" class="btn white-btn w-100 rad16 f-16 py-3 mt-3 btn-destino" data-toggle="modal" data-target="#modalViajantes">
                                         Elegir como destino
                                     </button>
                                 </div>
@@ -896,22 +904,23 @@
         <div class="modal fade modalFull" id="modal-fechas" tabindex="-1" aria-labelledby="modal-fechasLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
-                    <div class="modal-header norad d-flex align-items-center justify-content-between p-4" style="background-color: #FAFBFD;">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between p-4" style="background-color: #F6F7FB;">
                         <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
                     </div>
-                    <div class="modal-body px-0">
-                        <div class="container-fluid px-0 py-4" style="background-color: #FAFBFD;">
+                    <div class="modal-body px-0" style="margin-top: -20px;">
+                        <div class="container-fluid px-0 py-4" style="background-color: #F6F7FB;">
                             <div class="col-12 px-4">
                                 <h5 class="txt-left f-24 fblack fw-700 pb-0 px-3">Elige tus fechas de ida y regreso</h5>                                      
                             </div>                           
                         </div>
                         <div class="container-fluid px-0">
                             <div class="row">                                
-                                <div class="col-12 text-center pt-4">
+                                <div class="col-12 text-center pt-4" style="height: 1050px; overflow-y: scroll;">
                                     <div id="calendario"></div>
+                                    <!-- Para que el día se muestre seleccionado, hay que agregar la clase "is-start-date" al div con clase "day-item" todo esto se pinta dinámicamente por la librería -->
                                 </div>
                             </div>                         
                         </div>
@@ -934,7 +943,7 @@
                                 </div>
                                 <div class="col-6">
                                     <button type="button" class="btn disabled-btn w-100 f-24 rad16 py-4">Continuar</button>
-                                    <!-- Para que el botón se muestre como activo, cambiar la clase disabled-btn por "purple-btn" -->
+                                    <!-- Para que el botón se muestre como activo, cambiar la clase "disabled-btn" por "purple-btn" -->
                                 </div>
                             </div>
                         </div>
@@ -961,7 +970,7 @@
                         <div class="container-fluid">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMenores">Modal Menores</button>
                             
-                            <div class="col-12">
+                            <div class="col-12 px-3">
                                 <div class="row">
                                     <div class="col-8 d-flex align-items-center justify-content-start">
                                         <img src="assets/images/iconos-logos/adultos.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
@@ -979,7 +988,7 @@
                                     </div>
                                 </div>                                    
                             </div> 
-                            <div class="col-12 mt-5">
+                            <div class="col-12 px-3 mt-5 mb-5">
                                 <div class="row">
                                     <div class="col-8 d-flex align-items-center justify-content-start">
                                         <img src="assets/images/iconos-logos/ninos.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
@@ -997,14 +1006,14 @@
                                     </div>
                                 </div>
                             </div>  
-                            <div class="col-12 mt-5">
+                            <div class="col-12 px-3 mt-5">
                                 <div class="row">
                                     <div class="col-8 d-flex align-items-center justify-content-start">
                                         <img src="assets/images/iconos-logos/inapam.svg" class="img-fluid float-left me-3 icon-viajeros" alt="">
                                         <div>
                                             <p class="f-32 fw-700 fblack mb-0 pb-0">INAPAM</p>
                                             <span class="fw-300 f-16">Más de 60 años con identificación oficial vigente</span><br>
-                                            <a href="#" class="purple-link f-600 f-20" data-bs-toggle="modal" data-bs-target="#modal-inapam">Más información</a>
+                                            <a href="#" class="purple-link f-600 f-20" id="open-modal-inapam">Más información</a>
                                         </div>
                                     </div>
                                     <div class="col-4 d-flex align-items-center justify-content-end">
@@ -1022,7 +1031,8 @@
                         <div class="container-fluid">                            
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="index2.html" type="button" class="btn disabled-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar</a>                        
+                                    <a href="index2.html" type="button" class="btn disabled-btn w-100 f-24 rad16 py-3" data-bs-dismiss="modal">Continuar</a>   
+                                    <!-- Cambiar la clase disabled-btn por purple-btn -->
                                 </div>
                             </div>
                         </div>
@@ -1046,7 +1056,7 @@
                     </div>
                     <div class="modal-body py-5">
                         <div class="container-fluid">
-                            <div class="col-12">
+                            <div class="col-12 px-4">
                                 <p class="f-24 fblack">
                                     <strong class="f-purple">Si tienes tu credencial INAPAM aprovecha el 50% de descuento</strong> que ADO te ofrece:
                                 </p>                                 
@@ -1076,7 +1086,7 @@
                 <div class="modal-content rad16">
                     <div class="modal-header justify-content-center align-items-center flex-column">
                         <img src="assets/images/iconos-logos/alert.svg" alt="" class="mb-3">
-                        <h5 class="f-40 fw-700 text-center" id="modalMenoresLabel">Los menores deben viajar acompañados</h5>
+                        <h5 class="f-32 fw-700 text-center" id="modalMenoresLabel">Los menores deben viajar acompañados</h5>
                     </div>
                     
                     <div class="modal-body pt-5">
@@ -1152,17 +1162,35 @@
                     window.location.href = url;
                 });
             });
+            
+            // Función para que las tarjetas de destinos mantengan el hover con cada clic al botón
+            document.querySelectorAll('.btn-destino').forEach(function(btn){
+                btn.addEventListener('click', function(){
+
+                    const card = this.closest('.card-destino');
+                    card.classList.toggle('active');
+
+                    if(card.classList.contains('active')){
+                        this.textContent = 'Eliminar destino';
+                    }else{
+                        this.textContent = 'Elegir este destino';
+                    }
+                });
+            });
 
             /* ********** Lightpicker ********** */
             new Litepicker({
                 element: document.getElementById('calendario'),
-                minDate: new Date(),
                 inlineMode: true,
                 singleMode: false,
-                numberOfMonths: 2,
+                numberOfMonths: 6,
                 numberOfColumns: 1,
-                firstDay: 0,
                 lang: 'es-ES',
+                langName: 'Español',
+                tooltipText: {
+                    one: 'día',
+                    other: 'días'
+                },
                 buttonText: {
                     previousMonth: '←',
                     nextMonth: '→',
@@ -1170,18 +1198,55 @@
                     cancel: 'Cancelar',
                     reset: 'Reiniciar'
                 },
-
-                tooltipText: {
-                    one: 'día',
-                    other: 'días'
-                },
-
-                tooltipNumber: (totalDays) => {
-                    return totalDays;
+                locale: {
+                    weekdays: [
+                        'Domingo',
+                        'Lunes',
+                        'Martes',
+                        'Miércoles',
+                        'Jueves',
+                        'Viernes',
+                        'Sábado'
+                    ],
+                    weekdaysShort: [
+                        'DO',
+                        'LU',
+                        'MA',
+                        'MI',
+                        'JU',
+                        'VI',
+                        'SA'
+                    ],
+                    months: [
+                        'Enero',
+                        'Febrero',
+                        'Marzo',
+                        'Abril',
+                        'Mayo',
+                        'Junio',
+                        'Julio',
+                        'Agosto',
+                        'Septiembre',
+                        'Octubre',
+                        'Noviembre',
+                        'Diciembre'
+                    ]
                 }
             });
             
             
+            /* Funciones para cerrar modals sin que se cierren todos a la vez
+                hay modals que saltan sin presionar algún botón, es decir, cuando algo sucede y hay que arrojar algún mensaje.
+                En ese caso, se debería usar esta misma función si es que detrás hay más modals abiertos, así solo se va a cerrar el modal actual y no los que ya estaban abiertos.
+            */
+            const modalINAPAM = new bootstrap.Modal(
+                document.getElementById("modal-inapam")
+            );
+            document.getElementById("open-modal-inapam").addEventListener("click", function(){
+                modalINAPAM.show();
+            });
+            
+            // Función para intercambiar los íconos de búsqueda y limpiar datos en los inputs de origen y destino
             const input = document.getElementById('terminal-origen');
             const icon = document.getElementById('searchIcon');
             const searchIcon = 'assets/images/iconos-logos/search.svg';

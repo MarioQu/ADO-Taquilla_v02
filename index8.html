@@ -15,7 +15,7 @@
     </head>
     
     <body>
-        <section class="container-lg px-5">
+        <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row pt-5 pb-5 pb-3">
                 <div class="col-4">
                     <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
@@ -30,233 +30,203 @@
             </div>
         </section>
         
-        <section class="container-lg whiteback">
+        <section class="container-lg">
+            <div class="row estatus-compra shadow" style="background-color: #F6F7FB;">
+                <div class="col-3 py-4 border-green">
+                    <!-- 
+                        Aquí hay que quitar la clase d-none a la imagen que quieran mostrar y eliminar las demás. 
+                        *** Toda esta parte aplica para las secciones donde se muestra esta barra de búsqueda
+                    -->
+                    <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Elegir boletos</span>
+                </div>
+                <div class="col-3 py-4 border-green">
+                    <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Asientos</span>
+                </div>
+                <div class="col-3 py-4 border-purple">
+                    <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Registro</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Pago</span>
+                </div>
+            </div>
+            
+            
             <div class="row">
-                <div class="col-12 px-0 mt-3">
-                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="boletos me-2">
-                                Elegir boletos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="asientos-on me-2">
-                                Asientos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
-                                <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
-                                Registro
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
-                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
-                                Pago
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- boletos-pane -->
-                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- asientos-pane -->
-                        
-                        <div class="tab-pane fade show active" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
-                                        <div class="row pt-3 faback" style="background-color: #F1F3F9;">
-                                            <div class="col-12">
-                                                <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
-                                            </div>
-                                            
-                                            <!-- <div class="col-12">
-                                                <div class="alert alert-warning rad20 text-center py-2" role="alert" style="background-color: #FFF1DB; border: 1px solid #D1820B;">
-                                                    <img src="assets/images/alert.svg" alt=""> Es necesario un correo electrónico para el envío de tus boletos.
-                                                </div>  
-                                            </div> -->
-                                            
-                                            <div class="col-12 mt-3 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">                                        
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none is-valid" id="email" value="300 123 4567 o correo@gmail.com">
-                                                            <div class="invalid-feedback">El correo no coincide</div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                    <!-- <div class="row px-3 pb-4">                                        
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Correo electrónico</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" placeholder="Ej: nombre@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="email" class="txt16 mb-1 f500">Confirmar correo electrónico</label>
-                                                            <input type="email" class="form-control fblack txt18 shadow-none is-invalid" id="email" placeholder="Ej: nombre@gmail.com">
-                                                            <div class="invalid-feedback">El correo no coincide</div>
-                                                        </div>                                                                    
-                                                    </div> -->
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div><!-- col-12 enviar boletos -->
+                <div class="col-12 px-0 mt-3">                                                                   
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
+                                <div class="row pt-3 faback" style="background-color: #F1F3F9;">
+                                    <div class="col-12">
+                                        <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
+                                    </div>
                                     
-                                    <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; height: 900px; overflow: scroll;">
-                                        <div class="row pt-3 faback" style="background-color: #F1F3F9;">
-                                            <div class="col-6">
-                                                <h5 class="fw-600 f-24">Registra pasajero(s)</h5>
+                                    <div class="col-12 mt-3 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">                                        
+                                                <div class="col-6">
+                                                    <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none is-invalid" id="email" value="300 123 4567 o correo@gmail.com">
+                                                    <div class="invalid-feedback">El correo no coincide</div>
+                                                </div>                                                                    
                                             </div>
-                                            <div class="col-6 text-end">
-                                                <a href="" data-bs-toggle="modal" data-bs-target="#modalAsistencia" class="f-18 fw-500 f-green2 d-flex align-items-center justify-content-end">
-                                                    ¿Qué es la asistencia total? <img src="assets/images/info.png" class="img-fluid" alt=""> <img src="assets/images/iconos-logos/info.png" alt="" class="ms-2">
-                                                </a>
-                                            </div>
-                                            <div class="col-12 mt-3 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 1: Adulto</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 2: Niño</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 3: INAPAM</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                            
-                                            <div class="col-12 mt-5 faback shadow rad16">
-                                                <form action="" class="">
-                                                    <div class="row px-3 py-4">  
-                                                        <div class="col-12">
-                                                            <p class="p-0 m-0 f-30 fw-700">Pasajero 4: INAPAM</p>
-                                                            <hr style="border-top: 2px solid #E3E7F2;">
-                                                        </div>                                      
-                                                        <div class="col-6">
-                                                            <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
-                                                            <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
-                                                            <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
-                                                            <div class="form-check mt-3">
-                                                                <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
-                                                                <label class="form-check-label fw-500 fblack" for="checkDefault">
-                                                                    Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    
-                                                    </div>
-                                                </form>
-                                            </div><!-- pasajero -->
-                                        </div>
-                                    </div><!-- col-12 enviar boletos -->
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- registro-pane -->
-                        
-                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- pago-pane -->
+                            </div><!-- col-12 enviar boletos -->
+                            
+                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; height: 900px; overflow: scroll;">
+                                <div class="row pt-3 faback" style="background-color: #F1F3F9;">
+                                    <div class="col-6">
+                                        <h5 class="fw-600 f-24">Registra pasajero(s)</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#modalAsistencia" class="f-18 fw-500 f-green2 d-flex align-items-center justify-content-end">
+                                            ¿Qué es la asistencia total? <img src="assets/images/info.png" class="img-fluid" alt=""> <img src="assets/images/iconos-logos/info.png" alt="" class="ms-2">
+                                        </a>
+                                    </div>
+                                    <div class="col-12 mt-3 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">  
+                                                <div class="col-12">
+                                                    <p class="p-0 m-0 f-30 fw-700">Pasajero 1: Adulto</p>
+                                                    <hr style="border-top: 2px solid #E3E7F2;">
+                                                </div>                                      
+                                                <div class="col-6">
+                                                    <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
+                                                    <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                    
+                                            </div>
+                                        </form>
+                                    </div><!-- pasajero -->
+                                    
+                                    <div class="col-12 mt-5 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">  
+                                                <div class="col-12">
+                                                    <p class="p-0 m-0 f-30 fw-700">Pasajero 2: Niño</p>
+                                                    <hr style="border-top: 2px solid #E3E7F2;">
+                                                </div>                                      
+                                                <div class="col-6">
+                                                    <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
+                                                    <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                    
+                                            </div>
+                                        </form>
+                                    </div><!-- pasajero -->
+                                    
+                                    <div class="col-12 mt-5 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">  
+                                                <div class="col-12">
+                                                    <p class="p-0 m-0 f-30 fw-700">Pasajero 3: INAPAM</p>
+                                                    <hr style="border-top: 2px solid #E3E7F2;">
+                                                </div>                                      
+                                                <div class="col-6">
+                                                    <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
+                                                    <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                    
+                                            </div>
+                                        </form>
+                                    </div><!-- pasajero -->
+                                    
+                                    <div class="col-12 mt-5 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">  
+                                                <div class="col-12">
+                                                    <p class="p-0 m-0 f-30 fw-700">Pasajero 4: INAPAM</p>
+                                                    <hr style="border-top: 2px solid #E3E7F2;">
+                                                </div>                                      
+                                                <div class="col-6">
+                                                    <label for="nombre" class="txt16 mb-1 fw-400">Nombre (s)</label>
+                                                    <input type="text" class="form-control f-18 shadow-none" id="nombre" placeholder="Ej: María">                
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de ida <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="apellido" class="txt16 mb-1 fw-400">Apellido (s)</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none" id="apellido" placeholder="Ej: García López">
+                                                    <div class="form-check mt-3">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" checked>
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            Asistencia total de regreso <span class="f-purple fw-700">$1,500 MXN</span>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                    
+                                            </div>
+                                        </form>
+                                    </div><!-- pasajero -->
+                                </div>
+                            </div><!-- col-12 enviar boletos -->
+                        </div>
                     </div>
                 </div>                
             </div>

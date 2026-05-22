@@ -17,7 +17,7 @@
     <body>
         <audio src="assets/audios/asientos-regreso.mp3" autoplay id="asientos-regreso"></audio>
         
-        <section class="container-lg px-5">
+        <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row pt-4 pb-3">
                 <div class="col-4">
                     <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
@@ -40,178 +40,237 @@
         </div>
         <!-- Borrar -->
         
-        <section class="container-lg whiteback">
+        <section class="container-lg">
+            <div class="row estatus-compra shadow" style="background-color: #F6F7FB;">
+                <div class="col-3 py-4 border-green">
+                    <!-- 
+                        Aquí hay que quitar la clase d-none a la imagen que quieran mostrar y eliminar las demás. 
+                        *** Toda esta parte aplica para las secciones donde se muestra esta barra de búsqueda
+                    -->
+                    <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Elegir boletos</span>
+                </div>
+                <div class="col-3 py-4 border-purple">
+                    <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Asientos</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Registro</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Pago</span>
+                </div>
+            </div>
+            
+            
             <div class="row">
-                <div class="col-12 px-0 mt-3">
-                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="boletos me-2">
-                                Elegir boletos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false" style="border-bottom: 3px solid #258910 !important;">
-                                <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on me-2">
-                                Asientos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
-                                <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
-                                Registro
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
-                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
-                                Pago
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0">
-                            <div class="container-fluid">
-                                <div class="row px-4">
-                                    <div class="col-12 shadow mt-4 py-4">
-                                        <div class="row whiteback pb-4 corridasBox-top">
-                                            <div class="col-2 d-flex align-items-center justify-content-center">
-                                                <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                <div class="col-12 px-0 mt-3">                    
+                    <div class="container-fluid">
+                        <div class="row px-4">
+                            <div class="col-12 shadow mt-4 py-4 rad20">
+                                <div class="row pb-4 corridasBox-top">
+                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-10 border-lx">
+                                        <div class="row">
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
                                             </div>
-                                            <div class="col-10 border-lx">
-                                                <div class="row">
-                                                    <div class="col-12 d-flex align-items-center justify-content-between">
-                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                                    </div>
-                                                    <div class="col-12 d-flex align-items-center justify-content-between">
-                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                                    </div>
-                                                </div>
-                                            </div>              
-                                        </div><!-- /row corridas -->
-                                        
-                                        <div class="row p-3 rounded-lg" style="border-top: 3px solid #FAFAFA;">
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de regreso</h5>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
-                                                    </div>
-                                                </div>                                                                                
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
                                             </div>
                                         </div>
-                                        
-                                        <div class="row mx-3">
-                                            <div class="col-8 py-3">
-                                                <div class="d-flex align-items-center justify-content-start">
-                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
-                                                        <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
-                                                        <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
-                                                        <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
-                                                    </div>
-                                                </div>
+                                    </div>              
+                                </div><!-- /row corridas -->
+                                
+                                <div class="row p-3 rounded-lg" style="box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de ida</h5>
                                             </div>
-                                            
-                                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                                <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                            <div class="col-6 text-end">
+                                                <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                            </div>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-8 py-3">
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
                                             </div>
                                         </div>
-                                        
-                                        <div class="row mx-3">
-                                            <div class="col-12">
-                                                <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
-                                            </div>
-                                        </div>
-                                    </div><!-- main col-12 -->
+                                    </div>
                                     
-                                    <div class="col-12 shadow mt-5 py-4" style="position: relative;">
-                                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(255, 255, 255, .7);"></div>
-                                        
-                                        <div class="row whiteback pb-4 corridasBox-top">
-                                            <div class="col-2 d-flex align-items-center justify-content-center">
-                                                <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <img src="assets/images/iconos-logos/check-ok1.svg" alt="">
+                                        <!-- 
+                                            Esta es la imagen para cuando el check se pone en verde
+                                            <img src="assets/images/iconos-logos/check-ok1.svg" alt=""> 
+                                        -->
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-12">
+                                        <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                    </div>
+                                </div>
+                            </div><!-- main col-12 -->
+                            
+                            <!-- 
+                                Aquí hay un segundo bloque con el borde verde para cuando se ocupe, la clase que hay que agregar el contendor principal ("col-12") es "green-border1"
+                            -->
+                            
+                            <div class="col-12 shadow mt-4 py-4 rad20 green-border1">
+                                <div class="row pb-4 corridasBox-top">
+                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/ADO.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-10 border-lx">
+                                        <div class="row">
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
                                             </div>
-                                            <div class="col-10 border-lx">
-                                                <div class="row">
-                                                    <div class="col-12 d-flex align-items-center justify-content-between">
-                                                        <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
-                                                        <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
-                                                        <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
-                                                    </div>
-                                                    <div class="col-12 d-flex align-items-center justify-content-between">
-                                                        <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
-                                                        <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
-                                                    </div>
-                                                </div>
-                                            </div>              
-                                        </div><!-- /row corridas -->
-                                        
-                                        <div class="row p-3 rounded-lg" style="border-top: 3px solid #FAFAFA;">
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de ida</h5>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
-                                                    </div>
-                                                </div>                                                                                
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row mx-3">
-                                            <div class="col-8 py-3">
-                                                <div class="d-flex align-items-center justify-content-start">
-                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
-                                                        <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
-                                                        <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
-                                                        <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-4 d-flex align-items-center justify-content-end">
-                                                <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
                                             </div>
                                         </div>
-                                        
-                                        <div class="row mx-3">
-                                            <div class="col-12">
-                                                <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                    </div>              
+                                </div><!-- /row corridas -->
+                                
+                                <div class="row p-3 rounded-lg" style="box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de regreso</h5>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                            </div>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-8 py-3">
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
                                             </div>
                                         </div>
-                                    </div><!-- main col-12 -->                                    
-                                </div><!-- main-row-->
-                            </div>
-                        </div><!-- boletos-pane -->
-                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- asientos-pane -->
-                        
-                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- registro-pane -->
-                        
-                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0">
-                            &nbsp;
-                        </div><!-- pago-pane -->
+                                    </div>
+                                    
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                        <!-- 
+                                            Esta es la imagen para cuando el check se pone en verde
+                                            <img src="assets/images/iconos-logos/check-ok1.svg" alt=""> 
+                                        -->
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-12">
+                                        <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                    </div>
+                                </div>
+                            </div><!-- main col-12 -->
+                            
+                            <div class="col-12 shadow mt-5 py-4 rad20" style="position: relative;">
+                                <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; z-index: 100; background-color: rgba(255, 255, 255, .7);"></div>
+                                
+                                <div class="row whiteback pb-4 corridasBox-top">
+                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                        <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-10 border-lx">
+                                        <div class="row">
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-20 fw-700 m-0 p-0">06:00 h</p>
+                                                <p class="f-12 fdark1 m-0 p-0">3h 10min. aprox. </p>
+                                                <p class="f-20 fw-700 m-0 p-0">08:10 h</p>
+                                            </div>
+                                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                                <p class="f-12 fw-500 pb-0 mb-0">Central México norte, CDMX</p>
+                                                <p class="f-12 fw-500 pb-0 mb-0">Apan, Hgo.</p>
+                                            </div>
+                                        </div>
+                                    </div>              
+                                </div><!-- /row corridas -->
+                                
+                                <div class="row p-3 rounded-lg" style="box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="f-24 txt-start fw-700 p-0 m-0">Elige tu(s) asiento(s) de ida</h5>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <p class="fw-700 f-purple f-24 m-0 p-0">Lunes 23 de Marzo</p>
+                                            </div>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-8 py-3">
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-down" data-aos-duration="1400">
+                                                <div class="bullets-asientos disp me-2"></div> <span class="fw-500 f-14">Disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start me-4" data-aos="fade-up" data-aos-duration="1700">
+                                                <div class="bullets-asientos nodisp me-2"></div> <span class="fw-500 f-14">No disponible</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-start" data-aos="fade-down" data-aos-duration="2000">
+                                                <div class="bullets-asientos select me-2"></div> <span class="fw-500 f-14">Seleccionado</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <img src="assets/images/iconos-logos/check-off.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="row mx-3">
+                                    <div class="col-12">
+                                        <img src="assets/images/autobus.svg" class="img-fluid w-100" alt="">
+                                    </div>
+                                </div>
+                            </div><!-- main col-12 -->                                    
+                        </div><!-- main-row-->
                     </div>
                 </div>                
             </div>

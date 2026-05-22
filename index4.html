@@ -30,7 +30,7 @@
     <body>
         <audio src="assets/audios/autobus-regreso.mp3" autoplay id="autobus-regreso"></audio>
         
-        <section class="container-lg px-5" style="background-color: #F1F3F9;">
+        <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row py-5">
                 <div class="col-6">
                     <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
@@ -43,50 +43,40 @@
             </div>
         </section>
         
-        <section class="container-lg whiteback">
-            <div class="row">
-                <div class="col-12 px-0">
-                    <ul class="nav nav-tabs nav-fill nav-corridas border-0" id="myTab" role="tablist">
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4 active" id="boletos-tab" data-bs-toggle="tab" data-bs-target="#boletos-tab-pane" type="button" role="tab" aria-controls="boletos-tab-pane" aria-selected="true">
-                                <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="boletos-off me-2">
-                                <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="boletos-on d-none me-2">
-                                Elegir boletos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="asientos-tab" data-bs-toggle="tab" data-bs-target="#asientos-tab-pane" type="button" role="tab" aria-controls="asientos-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="asientos-off me-2"> 
-                                <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="asientos-on d-none me-2">
-                                Asientos
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-tab-pane" type="button" role="tab" aria-controls="registro-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="registro-off me-2"> 
-                                <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="registro-on d-none me-2">
-                                Registro
-                            </button>
-                        </li>
-                        <li class="nav-item border-0" role="presentation">
-                            <button class="nav-link border-0 d-flex align-items-center justify-content-center py-4" id="pago-tab" data-bs-toggle="tab" data-bs-target="#pago-tab-pane" type="button" role="tab" aria-controls="pago-tab-pane" aria-selected="false">
-                                <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="pago-off me-2">
-                                <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="pago-on d-none me-2">
-                                Pago
-                            </button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="boletos-tab-pane" role="tabpanel" aria-labelledby="boletos-tab" tabindex="0"></div><!-- boletos-pane -->                        
-                        <div class="tab-pane fade" id="asientos-tab-pane" role="tabpanel" aria-labelledby="asientos-tab" tabindex="0"></div><!-- asientos-pane -->                        
-                        <div class="tab-pane fade" id="registro-tab-pane" role="tabpanel" aria-labelledby="registro-tab" tabindex="0"></div><!-- registro-pane -->                        
-                        <div class="tab-pane fade" id="pago-tab-pane" role="tabpanel" aria-labelledby="pago-tab" tabindex="0"></div><!-- pago-pane -->
-                    </div>
-                </div>                
+        <section class="container-lg">
+            <div class="row estatus-compra shadow" style="background-color: #F6F7FB;">
+                <div class="col-3 py-4 border-purple">
+                    <!-- 
+                        Aquí hay que quitar la clase d-none a la imagen que quieran mostrar y eliminar las demás. 
+                        *** Toda esta parte aplica para las secciones donde se muestra esta barra de búsqueda
+                    -->
+                    <img src="assets/images/iconos-logos/boletos-off.png" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/boletos-on.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-on-txt f-16">Elegir boletos</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/asientos-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/asientos-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Asientos</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/registro-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/registro-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Registro</span>
+                </div>
+                <div class="col-3 py-4">
+                    <img src="assets/images/iconos-logos/pago-off.svg" alt="" class="me-2">
+                    <img src="assets/images/iconos-logos/pago-on.svg" alt="" class="d-none me-2">
+                    <img src="assets/images/iconos-logos/check-ok1.svg" alt="" class="d-none me-2">
+                    <span class="fw-500 estatus-off-txt f-16">Pago</span>
+                </div>
             </div>
             
-            <div class="row green-div1 py-5 px-3 d-flex align-items-center justify-content-between">
+            
+            <div class="row green-div1 py-5 px-3 d-flex align-items-center justify-content-between" style="border: none !important;">
                 <div class="col-6">
                     <p class="m-0 p-0 fblack f-24 fw-700">Elige tu boleto de regreso </p>
                 </div>

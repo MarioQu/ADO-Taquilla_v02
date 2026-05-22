@@ -311,13 +311,25 @@ ul{
     left: 5%;
     right: 5%;
     width: 90% !important;
-}.card-destino:hover,
+}
+.card-destino:hover,
 .card-destino:hover .card-body,
 .card-destino:hover h5{
     background-color: #7a4680;
     color: #fff;
-}.card-destino:hover{
+}
+.card-destino:hover{
     box-shadow: 0px 0px 0px 7px #5f2167 inset;
+}
+.card-destino .white-btn{
+    background-color: var(--white) !important;
+    border: 1px solid var(--purple1);
+    color: var(--purple1) !important;
+}
+.card-destino.active,
+.card-destino.active .card-body{
+    background-color: #7a4680;
+    color: #fff;
 }
 
 /* Acorddion terminales */
@@ -373,52 +385,47 @@ ul{
     background: #87CE77;
 }
 
-
 /* Lightpicker */
-.litepicker {
-    display: block;
-}
-.litepicker .container__months {
-    display: flex;
-    flex-direction: column;
-}
-.month-item{
-    margin-bottom: 20px !important;
-}
-.container__months,
-.month-item-header,
-.month-item-weekdays-row,
-.container__days{
-    background-color: #FAFAFA !important;
-    box-shadow: none !important;
-}
-.day-item{
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 18px;
-}
-.month-item-name, .month-item-year{
-    font-family: "Montserrat", sans-serif !important;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-size: 28px;
-}
-.month-item-weekdays-row{
-    border-bottom: 1px solid #E3E7F2;
-}
-.month-item-weekdays-row div{
-    text-transform: uppercase;
-    font-size: 22px;
-    color: #000000;
-}
 .litepicker .container__days .day-item.is-start-date,
 .litepicker .container__days .day-item.is-end-date {
     background-color: #5F2167 !important;
 }
-.litepicker .container__days .day-item.is-in-range{
+.litepicker .container__days .day-item.is-in-range {
     background-color: #E4DAE6 !important;
 }
-.litepicker .container__days .day-item.is-locked{
-    color: #B5BAC7;
+.month-item-name{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.litepicker .container__months .month-item-weekdays-row {
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    color: #474A56 !important;
+}
+
+
+/*
+    Estatus compras
+*/
+.estatus-compra .estatus-on-txt{
+    color: #1D1F24;
+    font-weight: 600;
+}
+.estatus-compra .estatus-off-txt{
+    color: #959BA8;
+    font-weight: 400;
+}
+.estatus-compra .border-purple{
+    border-bottom: 5px solid #5F2167;
+}
+.estatus-compra .border-green{
+    border-bottom: 5px solid #258910;
+}
+
+.green-border1{
+    border: 1px solid #87CE77;
 }
 
 /* Modal Viajantes */
