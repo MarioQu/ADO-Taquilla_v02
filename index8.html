@@ -15,6 +15,8 @@
     </head>
     
     <body>
+        <div class="version-app">Versión 1.0.3</div>
+        
         <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row pt-5 pb-5 pb-3">
                 <div class="col-4">
@@ -78,20 +80,29 @@
                                             <div class="row px-3 py-4">                                        
                                                 <div class="col-6">
                                                     <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
-                                                    <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/ingresa-correo.mp3">
+                                                    <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/numero-correo-mexicano.mp3">
+                                                    <div id="passwordHelpBlock" class="form-text">
+                                                        Solo números nacionales
+                                                    </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
                                                     <input type="text" class="form-control fblack txt18 shadow-none is-invalid" id="email" value="300 123 4567 o correo@gmail.com">
                                                     <div class="invalid-feedback">El correo no coincide</div>
-                                                </div>                                                                    
+                                                </div>  
+                                                
+                                                <div class="col-12 mt-3">
+                                                    <div class="alert alert-warning d-flex align-items-center justify-content-center fw-500 py-2" role="alert">
+                                                        <img src="assets/images/iconos-logos/alert2.svg" alt="" class="me-2"> Los boletos se enviarán únicamente a números mexicanos
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div><!-- col-12 enviar boletos -->
                             
-                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; height: 900px; overflow: scroll;">
+                            <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; overflow: scroll; margin-bottom: 200px;">
                                 <div class="row pt-3 faback" style="background-color: #F1F3F9;">
                                     <div class="col-6">
                                         <h5 class="fw-600 f-24">Registra pasajero(s)</h5>
@@ -234,7 +245,7 @@
         
         <footer class="fixed-bottom pb-3" style="background-color: #F1F3F9;">
             <div class="container-fluid">
-                <div class="row green-div2 py-4 px-3" data-bs-toggle="modal" data-bs-target="#ModalTotal" style="cursor: pointer;">
+                <div class="row green-div2 py-4 px-3">
                     <div class="col">
                         <span class="fblack f-28 fw-700">Total</span>
                         <span class="fblack f-20 fw-400">(Incluye IVA)</span>

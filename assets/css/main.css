@@ -8,6 +8,15 @@ body{
     color: var(--dark1);
 }
 
+.version-app{
+    background: rgba(255, 255, 255, .6); 
+    font-size: 12px;
+    padding: 2px 5px;
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+}
+
 /* -----------------------------------
                 Colores 
 ------------------------------------ */
@@ -260,6 +269,36 @@ ul{
 ---------------------------------- */
 .back-red{
     background: var(--red1); 
+    height: 400px; 
+    position: fixed; 
+    width: 100%; 
+    left: 0; 
+    top: 0; 
+    right: 0; 
+    z-index: -10;
+}
+.back-purple{
+    background: #5F2167; 
+    height: 400px; 
+    position: fixed; 
+    width: 100%; 
+    left: 0; 
+    top: 0; 
+    right: 0; 
+    z-index: -10;
+}
+.back-blue{
+    background: #030168; 
+    height: 400px; 
+    position: fixed; 
+    width: 100%; 
+    left: 0; 
+    top: 0; 
+    right: 0; 
+    z-index: -10;
+}
+.back-orange{
+    background: #EE7623; 
     height: 400px; 
     position: fixed; 
     width: 100%; 

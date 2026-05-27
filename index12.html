@@ -36,23 +36,40 @@
                 height: 3rem;
             }
             .carousel-control-next, .carousel-control-prev {
-                top: 800px;
-                width: 80%;
+                top: 820px;
+                height: 100px;
+                width: 70%;
+            }            
+            #carTicketsIda .carousel-indicators,
+            #carTicketsRegreso .carousel-indicators {
+                margin: 0px auto -57px auto;
+                width: 100px;
+                background-color: #E7E8EB;
+                border-radius: 20px;
+            }
+            #carTicketsIda .carousel-indicators [data-bs-target],
+            #carTicketsRegreso .carousel-indicators [data-bs-target] {
+                width: 20px;
+                height: 20px;
+                background-color: #5F2167;
+                border-radius: 50%;
             }
         </style>
     </head>
     
-    <body>
+    <body style="background-color: #F1F3F9;">
+        <div class="version-app">Versión 1.0.3</div>
+        
         <div class="container-fluid">
             <div class="row mt-5">
                 <div class="col-12 text-center">
                     <span class="f-32 fw-700">Pases de abordar</span>
                 </div>
-                <div class="col-12 mt-3">
+                <div class="col-12">
                     <div class="row mt-3 mx-3">
-                        <div class="col-12 green-div3 rad16 py-3">
+                        <div class="col-12 rad16 py-1" style="background-color: #EBF7F6; border: 2px solid #169A8E;">
                             <p class="p-0 m-0 fblack f-22 fw-500 fblack text-center">
-                                <img src="assets/images/camara.svg" alt=""> Puedes tomar una foto de tus boletos para agilizar tu abordaje
+                                <img src="assets/images/camara.svg" alt="" style="width: 30px;"> Puedes tomar una foto de tus boletos para agilizar tu abordaje
                             </p>
                         </div>
                     </div>
@@ -85,7 +102,7 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="row whiteback p-4 corridasBox-top shadow">
+                                        <div class="row whiteback p-4 corridasBox-top shadow mt-4" style="border-radius: 0 !important;">
                                             <div class="col-2 d-flex align-items-center justify-content-center">
                                                 <img src="assets/images/ADO.svg" alt="" class="img-fluid">
                                             </div>
@@ -106,104 +123,109 @@
                                         
                                         <div class="row px-4 mt-4">
                                             <div class="col-12">
-                                                <div id="carTicketsIda" class="carousel slide" data-bs-ride="true" style="height: 1200px; overflow: scroll;">
+                                                <div id="carTicketsIda" class="carousel slide" data-bs-ride="true">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    </div>
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                 </div>
@@ -214,74 +236,74 @@
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 460px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <span class="f-18 fw-500">Folio:</span>
+                                                                            <span class="f-18 fw-400">Folio:</span>
                                                                             <p class="f-20 fdark fw-700">12345678910</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                 </div>
@@ -313,7 +335,7 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="row whiteback p-4 corridasBox-top shadow">
+                                        <div class="row whiteback p-4 corridasBox-top shadow mt-4" style="border-radius: 0 !important;">
                                             <div class="col-2 d-flex align-items-center justify-content-center">
                                                 <img src="assets/images/iconos-logos/logo-au.png" alt="" class="img-fluid">
                                             </div>
@@ -332,94 +354,111 @@
                                             </div>              
                                         </div><!-- /row corridas -->
                                         
-                                        <div class="row px-4 mt-5">
+                                        <div class="row px-4 mt-4">
                                             <div class="col-12">
-                                                <div id="carTicketsRegreso" class="carousel slide" data-bs-ride="true" style="height: 1200px; overflow: scroll;">
+                                                <div id="carTicketsRegreso" class="carousel slide" data-bs-ride="true">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    </div>
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                 </div>
@@ -430,65 +469,74 @@
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-orange p-4 rad16 pb-5" style="height: 420px;">
-                                                                            <span class="f-18 fw-500">Pasajero:</span>
-                                                                            <p class="f-20 fdark fw-700" style="line-height: 24px; height: 50px;">Jimena Vinat Legorreta</p>
+                                                                        <div class="card-boletos-car border-orange px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                            <span class="f-18 fw-400">Pasajero:</span>
+                                                                            <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
-                                                                            <div class="container-fluid">
+                                                                            <span class="f-18 fw-400">Folio:</span>
+                                                                            <p class="f-20 fdark fw-700">12345678910</p>
+                                                                            
+                                                                            <div class="container-fluid px-0 pt-0 mt-0">
                                                                                 <div class="row">
                                                                                     <div class="col">
-                                                                                        <span class="f-16">Tipo:</span>
-                                                                                        <p class="f-18 fdark fw-500">Adulto</p>
+                                                                                        <span class="f-18 fw-400">Tipo:</span>
+                                                                                        <p class="f-20 fdark fw-700">Adulto</p>
                                                                                     </div>
                                                                                     <div class="col">                                                                
-                                                                                        <span class="f-16">Asiento:</span>
-                                                                                        <p class="f-18 fdark fw-500">15</p>
+                                                                                        <span class="f-18 fw-400">Asiento:</span>
+                                                                                        <p class="f-20 fdark fw-700">00</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>                                                    
-                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block mt-2" alt="">
+                                                                            <img src="assets/images/codigo-qr.svg" class="img-fluid mx-auto d-block" alt="" style="width: 150px;">
                                                                         </div><!-- card-boletos -->
                                                                     </div><!-- col-6 -->
                                                                 </div>
@@ -515,7 +563,7 @@
             </div>
         </div>
         
-        <div class="container-fluid py-3 fixed-bottom" style="background-color: #F1F3F9;">
+        <div class="container-fluid py-3 fixed-bottom" style="background-color: #E3E7F2;">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
                     <a href="index9.html" class="btn white-btn w-100 py-3 f-24 rad20 shadow-none">Regresar</a>
