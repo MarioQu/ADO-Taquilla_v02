@@ -41,11 +41,15 @@
                 width: 70%;
             }            
             #carTicketsIda .carousel-indicators,
-            #carTicketsRegreso .carousel-indicators {
-                margin: 0px auto -57px auto;
-                width: 100px;
+            #carTicketsRegreso .carousel-indicators {                
                 background-color: #E7E8EB;
-                border-radius: 20px;
+                border-radius: 20px;                
+                position: fixed !important;
+                bottom: 125px !important;
+                width: 100px !important;
+                z-index: 999 !important;
+                left: 29% !important;
+                right: 0;
             }
             #carTicketsIda .carousel-indicators [data-bs-target],
             #carTicketsRegreso .carousel-indicators [data-bs-target] {
@@ -124,11 +128,8 @@
                                         <div class="row px-4 mt-4">
                                             <div class="col-12">
                                                 <div id="carTicketsIda" class="carousel slide" data-bs-ride="true">
-                                                    <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                                    </div>
+                                                    <div class="carousel-indicators"></div>
+                                                    
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
                                                             <div class="container-fluid">
@@ -357,11 +358,8 @@
                                         <div class="row px-4 mt-4">
                                             <div class="col-12">
                                                 <div id="carTicketsRegreso" class="carousel slide" data-bs-ride="true">
-                                                    <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#carTicketsIda" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                                    </div>
+                                                    <div class="carousel-indicators"> </div>
+                                                    
                                                     <div class="carousel-inner">
                                                         <div class="carousel-item active">
                                                             <div class="container-fluid">
@@ -593,6 +591,68 @@
                 }).catch(() => {                    
                     window.location.href = url;
                 });
+            });
+            
+            
+            // Indicadores dinámicos para carrusel
+            const carousel = document.querySelector('#carTicketsIda');
+            const items = carousel.querySelectorAll('.carousel-item');
+            const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+
+            items.forEach((item, index) => {
+
+                const button = document.createElement('button');
+
+                button.type = 'button';
+                button.setAttribute('data-bs-target', '#carTicketsIda');
+                button.setAttribute('data-bs-slide-to', index);
+                button.setAttribute('aria-label', `Slide ${index + 1}`);
+
+                if(index === 0){
+                    button.classList.add('active');
+                    button.setAttribute('aria-current', 'true');
+                }
+                indicatorsContainer.appendChild(button);
+            });
+            
+            
+            const carousel2 = document.querySelector('#carTicketsRegreso');
+            const items2 = carousel2.querySelectorAll('.carousel-item');
+            const indicatorsContainer2 = carousel2.querySelector('.carousel-indicators');
+
+            items2.forEach((item, index) => {
+
+                const button2 = document.createElement('button');
+
+                button2.type = 'button';
+                button2.setAttribute('data-bs-target', '#carTicketsRegreso');
+                button2.setAttribute('data-bs-slide-to', index);
+                button2.setAttribute('aria-label', `Slide ${index + 1}`);
+
+                if(index === 0){
+                    button2.classList.add('active');
+                    button2.setAttribute('aria-current', 'true');
+                }
+                indicatorsContainer2.appendChild(button2);
+            });
+            
+            
+            document.querySelectorAll('.carousel').forEach((carousel) => {
+                const items3 = carousel.querySelectorAll('.carousel-item');
+                if(items3.length <= 1){
+                    const indicators = carousel.querySelector('.carousel-indicators');                    
+                    const prevBtn = carousel.querySelector('.carousel-control-prev');
+                    const nextBtn = carousel.querySelector('.carousel-control-next');
+                    if(indicators){
+                        indicators.style.display = 'none';
+                    }
+                    if(prevBtn){
+                        prevBtn.style.display = 'none';
+                    }
+                    if(nextBtn){
+                        nextBtn.style.display = 'none';
+                    }
+                }            
             });
         </script>
     </body>
