@@ -46,6 +46,11 @@
                 font-size: 16px !important;
                 padding: 12px !important;
             }      
+            /* Esta es la clase para el día actual del calendario en los popup de fechas de ida y regreso */
+            .litepicker .container__days .day-item.is-today {
+                color: #fff !important;
+                background-color: #5F2167 !important;
+            }
             .accordion-button::after {
                 width: 40px;
                 height: 40px;
@@ -109,15 +114,26 @@
                         - ADO Platino: "ado-platino.svg"
                         - AU: "AU.svg"
                     -->
-                    <img src="assets/images/iconos-logos/AU.svg" class="img-fluid" alt="">
+                    <img src="assets/images/iconos-logos/ADO-white.svg" class="img-fluid" alt="">
                 </div>
                 <div class="col-7 d-flex align-items-cemter justify-content-end">
                     <a href="" class="btn purple-btn radius8 btnlang d-flex align-items-center justify-content-center f-16 me-3" style="height: 50px; width: 146px;">
                         <img src="assets/images/iconos-logos/idioma-white.svg" alt="" class="me-1"> Español
-                    </a>
+                    </a><!-- clase del botón cambia a white-btn y la imagen cambia de "idioma-white" a "idioma-purple" -->
                     <a href="" class="btn white-btn radius8 btnlang d-flex align-items-center justify-content-center f-16" style="height: 50px; width: 146px;">
                         <img src="assets/images/iconos-logos/idioma-purple.svg" alt="" class="me-1"> English
                     </a>
+                    <!-- 
+                        clase del botón cambia a purple-btn y la imagen cambia de "idioma-purple" a "idioma-white" 
+                        Clases de botones con su hexadecimal del background para referencia:
+                        
+                        white-btn: #ffffff
+                        disabled-btn: #E3E7F2
+                        fa-btn: #FAFAFA
+                        purple-btn: #5F2167;
+                        gray1-btn: #E3E7F2;
+                        green-btn: #258910;
+                    -->                    
                 </div>
                 <div class="col-12 mt-4">
                     <span class="f-white fw-700 f-24">Compra tus boletos más rápido</span>
@@ -153,7 +169,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="destino" class="form-label mb-1 f-16">Destino</label>
-                                    <input type="text" class="form-control audio-field is-invalid" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
+                                    <input type="text" class="form-control audio-field" id="destino" placeholder="¿A dónde vas?" data-bs-toggle="modal" data-bs-target="#modal-destino" data-audio="assets/audios/a-donde-vas.mp3">
                                     <!-- para inputs con -status ok- poner clase "is-valid" -->
                                     <!-- para inputs con -status error- poner clase "is-invalid" esto aplica para todos los inputs -->
                                 </div>                                
@@ -177,6 +193,7 @@
                             <div class="row mt-4">
                                 <div class="col">
                                     <a href="index2.html" class="btn gray1-btn f-24 w-100 rad16 py-3" id="ComenzarCompra">Buscar viajes</a>
+                                    <!-- Cambiar clase gray1-btn a green-btn cuando se haya llenado el form -->
                                     <audio src="assets/audios/comencemos-compra.mp3" id="AudioComenzarCompra"></audio>
                                 </div>
                             </div><!-- row -->
@@ -302,7 +319,7 @@
                                 <div class="accordion border-0 pt-3" id="accordionTerminales" style="border-top: 1px solid #E6E7E7 !important;">
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
+                                            <button class="accordion-button collapsed shadow-none norad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
                                                 Campeche
                                             </button>
                                         </h2>
@@ -311,13 +328,32 @@
                                                 <div class="accordion border-0 subaccordions" id="subaccordion1">
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none py-0" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
+                                                            <button class="accordion-button collapsed shadow-none py-0 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
                                                                 Campeche 1
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
                                                             <div class="accordion-body">
-                                                                Lorem...
+                                                                <div class="list-group list-destinos">
+                                                                    <!-- Estos list-items de pintan de morado mediante :active en css, pero también se puede usar la clase active en cada elemento, ejemplo:
+                                                                     <a href="#" class="list-group-item list-group-item-action active">
+                                                                    -->
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 1
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 2
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 3
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 4
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 5
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div><!-- subaccordion-item -->
@@ -329,7 +365,26 @@
                                                         </h2>
                                                         <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
                                                             <div class="accordion-body">
-                                                                Lorem...
+                                                                <div class="list-group list-destinos">
+                                                                    <!-- Estos list-items de pintan de morado mediante :active en css, pero también se puede usar la clase active en cada elemento, ejemplo:
+                                                                     <a href="#" class="list-group-item list-group-item-action active">
+                                                                    -->
+                                                                    <a href="#" class="list-group-item list-group-item-action active">
+                                                                        Destino Campeche 1
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 2
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 3
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 4
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 5
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>                                                   
@@ -580,6 +635,14 @@
                                 </div>
                                 <div class="col-6">
                                     <button type="button" class="btn disabled-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <!-- Cambiar clase disabled-btn a white-btn cuando corresponda, esto aplica a todas los botones, generalmente hay alguna clase llamada "X-btn", cambiarla conforme se necesite, las clases disponibles son:
+                                    "white-btn": #ffffff
+                                    "disabled-btn": #E3E7F2
+                                    "fa-btn": #FAFAFA
+                                    "purple-btn": #5F2167;
+                                    "gray1-btn": #E3E7F2;
+                                    "green-btn": #258910;
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -636,25 +699,63 @@
                                                 <div class="accordion border-0 subaccordions" id="subaccordion1">
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none py-0 f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
+                                                            <button class="accordion-button collapsed shadow-none py-0 f-20 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
                                                                 Campeche 1
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
                                                             <div class="accordion-body">
-                                                                Lorem...
+                                                                <div class="list-group list-destinos">
+                                                                    <!-- Estos list-items de pintan de morado mediante :active en css, pero también se puede usar la clase active en cada elemento, ejemplo:
+                                                                     <a href="#" class="list-group-item list-group-item-action active">
+                                                                    -->
+                                                                    <a href="#" class="list-group-item list-group-item-action active">
+                                                                        Destino Campeche 1
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 2
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 3
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 4
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 5
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div><!-- subaccordion-item -->
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
+                                                            <button class="accordion-button collapsed shadow-none f-20 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
                                                                 Campeche 2
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
                                                             <div class="accordion-body">
-                                                                Lorem...
+                                                                <div class="list-group list-destinos">
+                                                                    <!-- Estos list-items de pintan de morado mediante :active en css, pero también se puede usar la clase active en cada elemento, ejemplo:
+                                                                     <a href="#" class="list-group-item list-group-item-action active">
+                                                                    -->
+                                                                    <a href="#" class="list-group-item list-group-item-action active">
+                                                                        Destino Campeche 1
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 2
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 3
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 4
+                                                                    </a>
+                                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                                        Destino Campeche 5
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>                                                   
@@ -904,7 +1005,15 @@
                                     <button type="button" class="btn white-btn w-100 f-24 rad16 py-4" data-bs-dismiss="modal">Regresar</button>                        
                                 </div>
                                 <div class="col-6">
-                                    <button type="button" class="btn white-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <button type="button" class="btn disabled-btn w-100 f-24 rad16 py-4">Continuar</button>
+                                    <!-- Cambiar clase disabled-btn a white-btn cuando corresponda, esto aplica a todas los botones, generalmente hay alguna clase llamada "X-btn", cambiarla conforme se necesite, las clases disponibles son:
+                                    "white-btn": #ffffff
+                                    "disabled-btn": #E3E7F2
+                                    "fa-btn": #FAFAFA
+                                    "purple-btn": #5F2167;
+                                    "gray1-btn": #E3E7F2;
+                                    "green-btn": #258910;
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -1336,7 +1445,7 @@
                
                 
                 /* *******************************
-                    Deshabilitar botón de menos(-) cuando la cantidad de boletos llega a cero 
+                    Deshabilitar botón de menos(-) cuando la cantidad de boletos llega a cero y cuando el máximo de pasajeros es 8
                 */
                 function disableButton() {
                     $("#dec_ad").prop("disabled", total_ad <= 0);
@@ -1344,6 +1453,11 @@
                     $("#dec_ina").prop("disabled", total_ina <= 0);
                     $("#dec_est").prop("disabled", total_est <= 0);
                     $("#dec_mae").prop("disabled", total_mae <= 0);
+                    $("#inc_ad").prop("disabled", total_ad >= 8);
+                    $("#inc_ni").prop("disabled", total_ni >= 8);
+                    $("#inc_ina").prop("disabled", total_ina >= 8);
+                    $("#inc_est").prop("disabled", total_est >= 8);
+                    $("#inc_mae").prop("disabled", total_mae >= 8);
                 }
                 
                 /* *******************************

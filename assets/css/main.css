@@ -205,60 +205,37 @@ ul{
                 Botones 
 ---------------------------------- */
 .white-btn{
-    background-color: var(--white);
-    border: 1px solid var(--purple1);
-    color: var(--purple1)
-}.white-btn:hover{
-    background-color: var(--purple1);    
-    color: var(--white);
+    background-color: var(--white) !important;
+    border: 1px solid var(--purple1) !important;
+    color: var(--purple1) !important;
 }
 .disabled-btn{
-    background-color: #E3E7F2;
-    border: 1px solid #E3E7F2;
+    background-color: #E3E7F2 !important;
+    border: 1px solid #E3E7F2 !important;
 }
-
 .fa-btn{
-    background-color: #FAFAFA;
-    border: 1px solid var(--purple1);
-    color: var(--purple1)
-}.fa-btn:hover{
-    background-color: var(--purple1);    
-    color: #FAFAFA;
+    background-color: #FAFAFA !important;
+    border: 1px solid var(--purple1) !important;
+    color: var(--purple1) !important;
 }
-
 .purple-btn{
-    background-color: var(--purple1);
-    border: 1px solid var(--purple1);
-    color: var(--white)
-}.purple-btn:hover{
-    background-color: var(--white);    
-    border: 1px solid var(--purple1);
-    color: var(--purple1);
+    background-color: var(--purple1) !important;
+    border: 1px solid var(--purple1) !important;
+    color: var(--white) !important;
 }
-
 .gray1-btn{
-    background-color: #E3E7F2;
-    color: #6F7587;
-}.gray1-btn:hover{
-    background-color: #258910;
-    color: var(--white);
+    background-color: #E3E7F2 !important;
+    color: #6F7587 !important;
 }
-
 .green-btn{
-    background-color: #258910;
-    color: var(--white);
-    border: 1px solid #258910;
-}.green-btn:hover{
-    background-color: var(--white);
-    color: #258910;
-    border: 1px solid #258910;
+    background-color: #258910 !important;
+    color: var(--white) !important;
+    border: 1px solid #258910 !important;
 }
-
 .btnlang{
     width: 184px;
     height: 64px;
 }
-
 .btnRegresar1{
     width: 187px;
 }
@@ -351,13 +328,13 @@ ul{
     right: 5%;
     width: 90% !important;
 }
-.card-destino:hover,
-.card-destino:hover .card-body,
-.card-destino:hover h5{
+.card-destino:active,
+.card-destino:active .card-body,
+.card-destino:active h5{
     background-color: #7a4680;
     color: #fff;
 }
-.card-destino:hover{
+.card-destino:active{
     box-shadow: 0px 0px 0px 7px #5f2167 inset;
 }
 .card-destino .white-btn{
@@ -384,11 +361,25 @@ ul{
     background-color: #F1F3F9 !important;
     font-size: 20px;
 }
-.subaccordions button:hover{
+.accordion-item,
+.accordion-body,
+.accordion-button{
+    background-color: #F1F3F9 !important;
+}
+.subaccordions .list-group .list-group-item{
+    background-color: #F1F3F9;
+    border: none !important;
+}
+.list-group .list-group-item:not(:last-child) {
+    background-image: none !important;
+}
+.subaccordions .list-group .list-group-item:active,
+.list-destinos .list-group-item-action.active{
     background-color: var(--purple1) !important;
     color: var(--white) !important;
     border-radius: 20px;
 }
+
 #accordionTerminales button[aria-expanded="true"]{
     font-weight: 700;
 }
