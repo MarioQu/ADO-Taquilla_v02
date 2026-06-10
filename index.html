@@ -48,8 +48,7 @@
             }      
             /* Esta es la clase para el día actual del calendario en los popup de fechas de ida y regreso */
             .litepicker .container__days .day-item.is-today {
-                color: #fff !important;
-                background-color: #5F2167 !important;
+                color: #5F2167 !important;
             }
             .accordion-button::after {
                 width: 40px;
@@ -176,15 +175,15 @@
                             </div><!-- row -->
                             
                             <div class="row mt-4">
-                                <div class="col">
+                                <div class="col-4">
                                     <label for="ida" class="form-label f-16 mb-1">Fecha de ida</label>
                                     <input type="text" class="form-control audio-field" id="ida" placeholder="Lun. 23 de marzo" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-ida.mp3">
                                 </div>
-                                <div class="col">
+                                <div class="col-4" id="fechaRegreso">
                                     <label for="regreso" class="form-label f-16 mb-1">Fecha de regreso</label>
                                     <input type="text" class="form-control audio-field" id="regreso" placeholder="¿Cuándo regresas?" data-bs-toggle="modal" data-bs-target="#modal-fechas" data-audio="assets/audios/fecha-regreso.mp3">
                                 </div>
-                                <div class="col">
+                                <div class="col-4">
                                     <label for="pasajeros" class="form-label f-16 mb-1">Pasajeros</label>
                                     <input type="text" class="form-control" id="pasajeros" placeholder="1 adulto" data-bs-toggle="modal" data-bs-target="#modal-pasajeros">
                                 </div>
@@ -1577,6 +1576,27 @@
                 });
                                                 
                 disableButton();
+            });
+            
+            
+            // Toggle del input de fecha de regreso
+            document.addEventListener('DOMContentLoaded', function() {
+                const radioIdaRegreso = document.getElementById('inlineRadio1');
+                const radioSoloIda = document.getElementById('inlineRadio2');
+                const fechaRegreso = document.getElementById('fechaRegreso');
+
+                function toggleFechaRegreso() {
+                    if (radioSoloIda.checked) {
+                        fechaRegreso.style.display = 'none';
+                    } else {
+                        fechaRegreso.style.display = 'block';
+                    }
+                }
+
+                toggleFechaRegreso();
+                
+                radioIdaRegreso.addEventListener('change', toggleFechaRegreso);
+                radioSoloIda.addEventListener('change', toggleFechaRegreso);
             });
         </script>
     </body>
