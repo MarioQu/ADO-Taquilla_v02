@@ -63,7 +63,7 @@
             .destino-icon{
                 position:absolute;
                 top:50%;
-                right:15px;
+                right:30px;
                 transform:translateY(-50%);
                 cursor:pointer;
                 display:flex;
@@ -83,6 +83,14 @@
             #terminal-origen:focus,
             #terminal-destino:focus{
                 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            }
+            #terminal-origen::placeholder{
+                color: #1D1F24;
+                font-size: 18px;
+            }
+            #terminal-destino::placeholder{
+                color: #1D1F24;
+                font-size: 18px;
             }
         </style>
     </head>
@@ -113,7 +121,7 @@
                         - ADO Platino: "ado-platino.svg"
                         - AU: "AU.svg"
                     -->
-                    <img src="assets/images/iconos-logos/ADO-white.svg" class="img-fluid" alt="">
+                    <img src="assets/images/iconos-logos/brands/ADO-white.svg" class="img-fluid" alt="" style="width: 170px !important;">
                 </div>
                 <div class="col-7 d-flex align-items-cemter justify-content-end">
                     <a href="" class="btn purple-btn radius8 btnlang d-flex align-items-center justify-content-center f-16 me-3" style="height: 50px; width: 146px;">
@@ -289,38 +297,43 @@
         <div class="modal fade modalFull" id="modal-origen" tabindex="-1" aria-labelledby="modal-origenLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
-                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4" style="background: #E8EBF4;">
                         <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
                     </div>
-                    <div class="modal-body faback">
-                        <div class="container-fluid">
-                            <div class="col-12">
+                    <div class="modal-body faback p-0">
+                        <div class="container-fluid" style="background: #E8EBF4;">
+                            <div class="col-12 px-4">
                                 <h5 class="txt-left f-24 fblack fw-700 pb-0">Origen ¿de dónde sales?</h5>                                      
                             </div>
-                            <div class="row">                                
+                            <div class="row px-4 pb-4">                                
                                 <div class="col-12" style="position: relative;">
-                                    <hr class="separador">
-                                    <input type="text" class="form-control rad16 search" id="terminal-origen" placeholder="Encuentra terminal de origen"> 
+                                    <hr class="separador" style="border: 0; border-top: 3px solid #E3E7F2;">
+                                    <input type="text" class="form-control search" id="terminal-origen" placeholder="Encuentra terminal de origen" style="height: 75px; border-radius: 16px; background-color: #fff;"> 
                                     <span id="searchIcon" class="search-icon">
                                         <img src="assets/images/iconos-logos/search.svg" style="width: 20px;">
                                     </span>                               
-                                    <hr class="separador">
+                                    <hr class="separador" style="border: 0; border-top: 3px solid #E3E7F2;">
                                 </div>
-                                <div class="col-12" style="background-color: #fff;">
+                                <div class="col-12">
                                     <h5 class="txt-left f-24 fblack fw-700 pb-0">Terminales</h5>                                      
                                 </div>
                             </div>
                             
                             <div class="row mt-3">
                                 <!-- Accoordion -->
+                                 
+                                
+                                <!-- 
+                                    Aquí están los 3 tipos de íconos que se van a usar para los destinos/orígenes
+                                -->
                                 <div class="accordion border-0 pt-3" id="accordionTerminales" style="border-top: 1px solid #E6E7E7 !important;">
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none norad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
-                                                Campeche
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Campeche
                                             </button>
                                         </h2>
                                         <div id="collapseUno" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -329,7 +342,7 @@
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
                                                             <button class="accordion-button collapsed shadow-none py-0 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
-                                                                Campeche 1
+                                                                <img src="assets/images/terminales2.svg" alt="" class="me-2"> Campeche 1
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
@@ -339,19 +352,19 @@
                                                                      <a href="#" class="list-group-item list-group-item-action active">
                                                                     -->
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 1
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 1
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 2
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 2
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 3
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 3
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 4
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 4
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 5
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 5
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -360,7 +373,7 @@
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
                                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
-                                                                Campeche 2
+                                                                <img src="assets/images/terminales2.svg" alt="" class="me-2"> Campeche 2
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
@@ -396,7 +409,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
-                                                Chiapas
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Chiapas
                                             </button>
                                         </h2>
                                         <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -409,7 +422,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
-                                                Ciudad de México
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Ciudad de México
                                             </button>
                                         </h2>
                                         <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -422,7 +435,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
-                                                Estado de México
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Estado de México
                                             </button>
                                         </h2>
                                         <div id="collapseCuatro" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -435,7 +448,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
-                                                Guerrero
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Guerrero
                                             </button>
                                         </h2>
                                         <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -448,7 +461,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
-                                                Hidalgo
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Hidalgo
                                             </button>
                                         </h2>
                                         <div id="collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -522,7 +535,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
-                                                Morelos
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Morelos
                                             </button>
                                         </h2>
                                         <div id="collapseSiete" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -535,7 +548,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
-                                                Oaxaca
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Oaxaca
                                             </button>
                                         </h2>
                                         <div id="collapseOcho" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -548,7 +561,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
-                                                Puebla
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Puebla
                                             </button>
                                         </h2>
                                         <div id="collapseNueve" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -561,7 +574,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
-                                                Quintana Roo
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Quintana Roo
                                             </button>
                                         </h2>
                                         <div id="collapseDiez" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -574,7 +587,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
-                                                Tabasco
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Tabasco
                                             </button>
                                         </h2>
                                         <div id="collapseOnce" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -587,7 +600,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
-                                                Tlaxcala
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Tlaxcala
                                             </button>
                                         </h2>
                                         <div id="collapseDoce" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -600,7 +613,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
-                                                Veracruz
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Veracruz
                                             </button>
                                         </h2>
                                         <div id="collapseTrece" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -613,7 +626,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
-                                                Yucatán
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Yucatán
                                             </button>
                                         </h2>
                                         <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#accordionTerminales">
@@ -658,27 +671,25 @@
         <div class="modal fade modalFull" id="modal-destino" tabindex="-1" aria-labelledby="modal-destinoLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content h-100 norad">
-                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4">
+                    <div class="modal-header norad d-flex align-items-center justify-content-between border-0 p-4" style="background: #E8EBF4;">
                         <button class="btn white-btn btnRegresar1 py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                             <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
                         </button>
                         <p class="fw-700 f24 pt-2">23 de marzo 6:31h</p>
                     </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="col-12">
-                                <h5 class="txt-left f-24 fblack fw-700 pb-0">Destino ¿a dónde vas?</h5>                                      
+                    <div class="modal-body faback p-0">
+                        <div class="container-fluid" style="background: #E8EBF4;">
+                            <div class="col-12 px-4">
+                                <h5 class="txt-left f-24 fblack fw-700 pb-0">Destino a dónde vas?</h5>                                      
                             </div>
-                            <div class="row">                                
+                            <div class="row px-4 pb-4">                                
                                 <div class="col-12" style="position: relative;">
-                                    <hr class="separador">
-                                    <input type="text" class="form-control rad16 search" id="terminal-destino" placeholder="Encuentra una terminal">                                     
-                                    <span id="destinoIcon" class="destino-icon">
+                                    <hr class="separador" style="border: 0; border-top: 3px solid #E3E7F2;">
+                                    <input type="text" class="form-control search" id="terminal-destino" placeholder="Encuentra terminal de destino" style="height: 75px; border-radius: 16px; background-color: #fff;"> 
+                                    <span id="searchIcon" class="search-icon">
                                         <img src="assets/images/iconos-logos/search.svg" style="width: 20px;">
-                                    </span>              
-                                    
-                                    
-                                    <hr class="separador">
+                                    </span>                               
+                                    <hr class="separador" style="border: 0; border-top: 3px solid #E3E7F2;">
                                 </div>
                                 <div class="col-12">
                                     <h5 class="txt-left f-24 fblack fw-700 pb-0">Terminales</h5>                                      
@@ -687,11 +698,11 @@
                             
                             <div class="row mt-3">
                                 <!-- Accoordion -->
-                                <div class="accordion border-0 pt-3" id="accordionDestino" style="border-top: 1px solid #E6E7E7 !important;">
+                                <div class="accordion border-0 p-0 pt-3" id="accordionDestino" style="border-top: 1px solid #E6E7E7 !important;">
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno" aria-expanded="false" aria-controls="collapseUno">
-                                                Campeche
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Campeche
                                             </button>
                                         </h2>
                                         <div id="collapseUno" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -700,7 +711,7 @@
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
                                                             <button class="accordion-button collapsed shadow-none py-0 f-20 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsUno" aria-expanded="false" aria-controls="subCollapsUno">
-                                                                Campeche 1
+                                                                <img src="assets/images/terminales2.svg" alt="" class="me-2"> Campeche 1
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsUno" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
@@ -710,19 +721,19 @@
                                                                      <a href="#" class="list-group-item list-group-item-action active">
                                                                     -->
                                                                     <a href="#" class="list-group-item list-group-item-action active">
-                                                                        Destino Campeche 1
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 1
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 2
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 2
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 3
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 3
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 4
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 4
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 5
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 5
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -731,7 +742,7 @@
                                                     <div class="accordion-item border-0">
                                                         <h2 class="accordion-header">
                                                             <button class="accordion-button collapsed shadow-none f-20 norad" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapsDos" aria-expanded="false" aria-controls="subCollapsDos">
-                                                                Campeche 2
+                                                                <img src="assets/images/terminales2.svg" alt="" class="me-2"> Campeche 2
                                                             </button>
                                                         </h2>
                                                         <div id="subCollapsDos" class="accordion-collapse collapse" data-bs-parent="#subaccordion1">
@@ -741,19 +752,19 @@
                                                                      <a href="#" class="list-group-item list-group-item-action active">
                                                                     -->
                                                                     <a href="#" class="list-group-item list-group-item-action active">
-                                                                        Destino Campeche 1
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 1
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 2
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 2
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 3
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 3
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 4
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 4
                                                                     </a>
                                                                     <a href="#" class="list-group-item list-group-item-action">
-                                                                        Destino Campeche 5
+                                                                        <img src="assets/images/terminales3.svg" alt="" class="me-2"> Destino Campeche 5
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -767,7 +778,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos" aria-expanded="false" aria-controls="collapseDos">
-                                                Chiapas
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Chiapas
                                             </button>
                                         </h2>
                                         <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -780,7 +791,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
-                                                Ciudad de México
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Ciudad de México
                                             </button>
                                         </h2>
                                         <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -793,7 +804,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
-                                                Estado de México
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Estado de México
                                             </button>
                                         </h2>
                                         <div id="collapseCuatro" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -806,7 +817,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
-                                                Guerrero
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Guerrero
                                             </button>
                                         </h2>
                                         <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -819,7 +830,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
-                                                Hidalgo
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Hidalgo
                                             </button>
                                         </h2>
                                         <div id="collapseSeis" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -893,7 +904,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
-                                                Morelos
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Morelos
                                             </button>
                                         </h2>
                                         <div id="collapseSiete" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -906,7 +917,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
-                                                Oaxaca
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Oaxaca
                                             </button>
                                         </h2>
                                         <div id="collapseOcho" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -919,7 +930,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
-                                                Puebla
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Puebla
                                             </button>
                                         </h2>
                                         <div id="collapseNueve" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -932,7 +943,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiez" aria-expanded="false" aria-controls="collapseDiez">
-                                                Quintana Roo
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Quintana Roo
                                             </button>
                                         </h2>
                                         <div id="collapseDiez" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -945,7 +956,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
-                                                Tabasco
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Tabasco
                                             </button>
                                         </h2>
                                         <div id="collapseOnce" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -958,7 +969,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoce" aria-expanded="false" aria-controls="collapseDoce">
-                                                Tlaxcala
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Tlaxcala
                                             </button>
                                         </h2>
                                         <div id="collapseDoce" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -971,7 +982,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrece" aria-expanded="false" aria-controls="collapseTrece">
-                                                Veracruz
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Veracruz
                                             </button>
                                         </h2>
                                         <div id="collapseTrece" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">
@@ -984,7 +995,7 @@
                                     <div class="accordion-item border-0">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed shadow-none f-20" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat" aria-expanded="false" aria-controls="collapseCat">
-                                                Yucatán
+                                                <img src="assets/images/terminales1.svg" alt="" class="me-2"> Yucatán
                                             </button>
                                         </h2>
                                         <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#accordionDestino">

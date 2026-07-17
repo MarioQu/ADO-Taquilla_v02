@@ -12,6 +12,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
         <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
         <title>Document</title>
+        <style>
+            .text-bg-success{
+                background-color: #258910 !important;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        </style>
     </head>
     
     <body>
@@ -21,15 +29,20 @@
         
         <section class="container-lg px-5" style="background-color: #F6F7FB;">
             <div class="row pt-4 pb-3">
-                <div class="col-4">
-                    <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                <div class="col-4 px-0 d-flex justify-content-between align-items-center">
+                    <button class="btn fa-btn py-2 f-16 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                    </button> 
+                    <button class="btn fa-btn py-2 f-16 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <iconify-icon icon="ant-design:home-outlined"></iconify-icon> Ir a inicio
                     </button>                        
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-end">
-                    <img src="assets/images/iconos-logos/time.svg" alt="" class="me-2">
-                    <p class="fw-700 f-16 p-0 m-0 me-2">Tiempo restante para finalizar la compra</p>
-                    <p class="p-0 m-0 f-red f-32 fw-700">09:58</p>
+                <div class=" col-8 d-flex align-items-center justify-content-end text-end">
+                    <span class="badge text-bg-success d-flex align-items-center" style="background-color: #7A4680 !important;">
+                        <img src="assets/images/time-white.svg" alt="" class="me-2">
+                        <span class="fw-600 f-16">Tiempo restante para finalizar la compra</span>
+                        <span class="f-24 fw-700 ps-2">09:58</span>
+                    </span>
                 </div>
             </div>
         </section>
@@ -128,11 +141,8 @@
                                     </div>
                                     
                                     <div class="col-4 d-flex align-items-center justify-content-end">
-                                        <img src="assets/images/iconos-logos/check-ok1.svg" alt="">
-                                        <!-- 
-                                            Esta es la imagen para cuando el check se pone en verde
-                                            <img src="assets/images/iconos-logos/check-ok1.svg" alt=""> 
-                                        -->
+                                        <span class="badge text-bg-success">Asientos seleccionados <img src="assets/images/check-white.svg" alt=""></span>
+                                        
                                     </div>
                                 </div>
                                 
@@ -147,7 +157,7 @@
                                 Aquí hay un segundo bloque con el borde verde para cuando se ocupe, la clase que hay que agregar el contendor principal ("col-12") es "green-border1"
                             -->
                             
-                            <div class="col-12 shadow mt-4 py-4 rad20 green-border1">
+                            <div class="col-12 shadow mt-4 py-4 rad20 green-border1" style="border: 3px solid #87CE77;">
                                 <div class="row pb-4 corridasBox-top">
                                     <div class="col-2 d-flex align-items-center justify-content-center">
                                         <img src="assets/images/ADO.svg" alt="" class="img-fluid">

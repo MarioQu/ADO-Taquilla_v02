@@ -36,7 +36,7 @@
                 height: 3rem;
             }
             .carousel-control-next, .carousel-control-prev {
-                top: 820px;
+                top: 810px;
                 height: 100px;
                 width: 70%;
             }            
@@ -45,7 +45,7 @@
                 background-color: #E7E8EB;
                 border-radius: 20px;                
                 position: fixed !important;
-                bottom: 150px !important;
+                bottom: 110px !important;
                 width: 100px !important;
                 z-index: 999 !important;
                 left: 29% !important;
@@ -58,22 +58,63 @@
                 background-color: #5F2167;
                 border-radius: 50%;
             }
+            
+            /* Border Boletos */
+            .border-platino {
+                box-shadow: 0px -20px 0px -3px #1D1F24 inset;
+            }
+            .border-gl {
+                box-shadow: 0px -20px 0px -3px #62165C inset;
+            }
+            .border-estrella-plus {
+                box-shadow: 0px -20px 0px -3px #F5B335 inset;
+            }
+            .border-primera {
+                box-shadow: 0px -20px 0px -3px #E11F2A inset;
+            }
+            .border-texcoco-plus {
+                box-shadow: 0px -20px 0px -3px #CE0E2D inset;
+            }
+            .border-estrella {
+                box-shadow: 0px -20px 0px -3px #007934 inset;
+            }
+            .border-texcoco {
+                box-shadow: 0px -20px 0px -3px #E9540D inset;
+            }
+            .border-au {
+                box-shadow: 0px -20px 0px -3px #EE7623 inset;
+            }
+            .border-occ {
+                box-shadow: 0px -20px 0px -3px #B41922 inset;
+            }
         </style>
     </head>
     
     <body style="background-color: #F1F3F9;">
         <div class="version-app">Versión 1.0.3</div>
         
+        <section class="container-lg px-5" style="background-color: #fff;">
+            <div class="row pt-4 pb-3">
+                <div class="offset-4 col-8 d-flex align-items-center justify-content-end text-end">
+                    <span class="badge text-bg-success d-flex align-items-center" style="background-color: #7A4680 !important;">
+                        <img src="assets/images/time-white.svg" alt="" class="me-2">
+                        <span class="fw-600 f-16">La sesión se cerrará en:</span>
+                        <span class="f-24 fw-700 ps-2">09:58</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+        
         <div class="container-fluid">
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-12 text-center">
                     <span class="f-32 fw-700">Pases de abordar</span>
                 </div>
                 <div class="col-12">
                     <div class="row mt-3 mx-3">
-                        <div class="col-12 rad16 py-1" style="background-color: #EBF7F6; border: 2px solid #169A8E;">
-                            <p class="p-0 m-0 fblack f-22 fw-500 fblack text-center">
-                                <img src="assets/images/camara.svg" alt="" style="width: 30px;"> Puedes tomar una foto de tus boletos para agilizar tu abordaje
+                        <div class="col-12 rad16 py-1" style="background-color: #B9E9E4; border: 2px solid #169A8E;">
+                            <p class="p-0 m-0 fblack f-22 fw-500 fblack text-center d-flex align-items-center justify-content-center">
+                                <img src="assets/images/camara.svg" alt="" style="width: 40px;" class="me-2"> Toma una foto de tus pases para agilizar tu abordaje
                             </p>
                         </div>
                     </div>
@@ -135,7 +176,20 @@
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                        
+                                                                        <!-- 
+                                                                            En estos DIVs hay que cambiar la clase "border-N" por la correspondiente de la siguiente lista (pondré clases distintas en los borders siguientes para que les sirva de guía):
+                                                                                .border-platino 
+                                                                                .border-gl    
+                                                                                .border-estrella-plus             
+                                                                                .border-primera          
+                                                                                .border-texcoco-plus              
+                                                                                .border-estrella             
+                                                                                .border-texcoco
+                                                                                .border-au             
+                                                                                .border-occ             
+                                                                        -->
+                                                                        <div class="card-boletos-car border-platino px-4 py-2 rad16 pb-5" style="height: 400px;">
                                                                             <span class="f-18 fw-400">Pasajero:</span>
                                                                             <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
@@ -159,7 +213,7 @@
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                        <div class="card-boletos-car border-gl px-4 py-2 rad16 pb-5" style="height: 400px;">
                                                                             <span class="f-18 fw-400">Pasajero:</span>
                                                                             <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
@@ -183,7 +237,7 @@
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                        <div class="card-boletos-car border-estrella-plus px-4 py-2 rad16 pb-5" style="height: 400px;">
                                                                             <span class="f-18 fw-400">Pasajero:</span>
                                                                             <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
@@ -207,7 +261,7 @@
                                                                     </div><!-- col-6 -->
                                                                     
                                                                     <div class="col-6 mb-3">
-                                                                        <div class="card-boletos-car border-red px-4 py-2 rad16 pb-5" style="height: 400px;">
+                                                                        <div class="card-boletos-car border-primera px-4 py-2 rad16 pb-5" style="height: 400px;">
                                                                             <span class="f-18 fw-400">Pasajero:</span>
                                                                             <p class="f-20 fdark fw-700 m-0 p-0 mb-2" style="line-height: 24px;">Jimena Vinat Legorreta</p>
                                                                             
@@ -564,7 +618,7 @@
         <div class="container-fluid py-3 fixed-bottom" style="background-color: #E3E7F2;">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 mb-sm-0 mb-md-0 mb-lg-0">
-                    <a href="index9.html" class="btn white-btn w-100 py-3 f-24 rad20 shadow-none">Regresar</a>
+                    <a href="index11.html" class="btn white-btn w-100 py-3 f-24 rad20 shadow-none">Regresar</a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <a href="index.html" class="btn purple-btn w-100 py-3 f-24 rad20 shadow-none" id="Abordar">Finalizar</a>

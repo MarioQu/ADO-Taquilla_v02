@@ -12,22 +12,36 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
         <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
         <title>Document</title>
+        <style>
+            .is-attention:hover{
+                box-shadow: 3px 3px 10px rgba(255, 243, 205, .8) !important;
+                background-color: rgba(255, 243, 205, .4) !important;
+                border: 1px solid #d1820b !important;
+                transition: .3s ease all;
+                transform: scale(1.05);
+            }
+        </style>
     </head>
     
     <body>
         <div class="version-app">Versión 1.0.3</div>
         
         <section class="container-lg px-5" style="background-color: #F6F7FB;">
-            <div class="row pt-5 pb-5 pb-3">
-                <div class="col-4">
-                    <button class="btn fa-btn py-2 px-3 f-24 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+            <div class="row pt-4 pb-3">
+                <div class="col-4 px-0 d-flex justify-content-between align-items-center">
+                    <button class="btn fa-btn py-2 f-16 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
                         <iconify-icon icon="ant-design:left-outlined"></iconify-icon> Regresar
+                    </button> 
+                    <button class="btn fa-btn py-2 f-16 shadow-none d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+                        <iconify-icon icon="ant-design:home-outlined"></iconify-icon> Ir a inicio
                     </button>                        
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-end">
-                    <img src="assets/images/iconos-logos/time.svg" alt="" class="me-2">
-                    <p class="fw-700 f-16 p-0 m-0 me-2">Tiempo restante para finalizar la compra</p>
-                    <p class="p-0 m-0 f-red f-32 fw-700">09:58</p>
+                <div class=" col-8 d-flex align-items-center justify-content-end text-end">
+                    <span class="badge text-bg-success d-flex align-items-center" style="background-color: #7A4680 !important;">
+                        <img src="assets/images/time-white.svg" alt="" class="me-2">
+                        <span class="fw-600 f-16">Tiempo restante para finalizar la compra</span>
+                        <span class="f-24 fw-700 ps-2">09:58</span>
+                    </span>
                 </div>
             </div>
         </section>
@@ -72,12 +86,23 @@
                             <div class="col-12 px-5 py-4" style="background-color: #F1F3F9;">
                                 <div class="row pt-3 faback" style="background-color: #F1F3F9;">
                                     <div class="col-12">
-                                        <h5 class="fw-600 f-24">Enviar boleto(s) a</h5>
+                                        <h5 class="fw-600 f-24">Ingresa tu número celular o correo electrónico</h5>
                                     </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <div class="alert alert-warning d-flex align-items-center justify-content-center fw-500 py-2" role="alert">
+                                                <img src="assets/images/iconos-logos/alert2.svg" alt="" class="me-2"> Los boletos solo pueden enviarse a números celulares de México
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                     
                                     <div class="col-12 mt-3 faback shadow rad16">
                                         <form action="" class="">
-                                            <div class="row px-3 py-4">                                        
+                                            <div class="row px-3 py-4"> 
+                                                
+                                                                                       
                                                 <div class="col-6">
                                                     <label for="email" class="txt16 mb-1 f500">Número de celular o correo electrónico</label>
                                                     <input type="text" class="form-control fblack txt18 shadow-none audio-field is-valid" id="email" value="300 123 4567 o correo@gmail.com" data-audio="assets/audios/numero-correo-mexicano.mp3">
@@ -88,18 +113,18 @@
                                                 <div class="col-6">
                                                     <label for="email" class="txt16 mb-1 f500">Confirmar número celular o correo</label>
                                                     <input type="text" class="form-control fblack txt18 shadow-none is-invalid" id="email" value="300 123 4567 o correo@gmail.com">
-                                                    <div class="invalid-feedback">El correo no coincide</div>
-                                                </div>  
+                                                    <div class="invalid-feedback">El correo no coincide</div>                                                    
+                                                </div> 
                                                 
-                                                <div class="col-12 mt-3">
-                                                    <div class="alert alert-warning d-flex align-items-center justify-content-center fw-500 py-2" role="alert">
-                                                        <img src="assets/images/iconos-logos/alert2.svg" alt="" class="me-2"> Los boletos se enviarán únicamente a números mexicanos
-                                                    </div>
-                                                </div>
+                                                <!-- Quitar este div, solo es para que puedan ver la animación y estilos para indicar que este input es el siguiente que debe llenarse, la clase se llama "is-attention" y se le agrega un hover -->
+                                                <div class="col-6 mt-4">
+                                                    <label for="email" class="txt16 mb-1 fw-600">Quitar este div-input</label>
+                                                    <input type="text" class="form-control fblack txt18 shadow-none is-attention" id="email" value="300 123 4567 o correo@gmail.com">
+                                                </div>                                                                                                  
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div>                                
                             </div><!-- col-12 enviar boletos -->
                             
                             <div class="col-12 px-5 py-4" style="background-color: #F1F3F9; overflow: scroll; margin-bottom: 200px;">
@@ -235,6 +260,21 @@
                                             </div>
                                         </form>
                                     </div><!-- pasajero -->
+                                    
+                                    <div class="col-12 mt-5 faback shadow rad16">
+                                        <form action="" class="">
+                                            <div class="row px-3 py-4">  
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                                        <label class="form-check-label fw-500 fblack" for="checkDefault">
+                                                            De acuerdo con <a href="" data-bs-toggle="modal" data-bs-target="#modalTerminos" class="fw-700 f-purple" >Términos y condiciones,</a> así como el <a href="" data-bs-toggle="modal" data-bs-target="#modalAviso" class="fw-700 f-purple">Aviso de privacidad</a>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                                                
+                                            </div>
+                                        </form>
+                                    </div><!-- Términos y Condiciones -->
                                 </div>
                             </div><!-- col-12 enviar boletos -->
                         </div>
@@ -488,6 +528,245 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Términos y Condiciones -->
+        <div class="modal fade modal-bottom" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content p-5 rounded-lg">
+                    <div class="modal-header align-items-center justify-content-between">                        
+                        <h5 class="f-24 fw-700" id="modalTerminosLabel">Términos y condiciones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>                    
+                    
+                    <div class="modal-body pt-5">
+                        <p class="f-24">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis natus iusto deleniti sit incidunt culpa alias, consectetur nobis eaque explicabo magni. Nam esse aperiam corporis sed eaque, magni maxime dignissimos.
+                        </p>
+                        <p class="f-24">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vel impedit praesentium omnis quae itaque adipisci blanditiis id debitis commodi! Ex optio beatae soluta blanditiis, dicta nam totam culpa. Dolorem!
+                        </p>
+                        <p class="f-24">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate autem, error ipsa voluptatum labore id molestiae iusto mollitia, quis amet sit velit omnis ipsum voluptatibus ipsam. Explicabo consequuntur nesciunt asperiores!
+                        </p>
+                        <p class="f-24">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatem nihil, animi dicta doloribus dignissimos perspiciatis amet aut libero at, quae eligendi aliquam laboriosam vel, a maiores illo facere accusamus!
+                        </p>
+                    </div>                                
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal Aviso de Privacidad -->
+        <div class="modal fade modal-bottom" id="modalAviso" tabindex="-1" aria-labelledby="modalAvisoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content p-5 rounded-lg">
+                    <div class="modal-header align-items-center justify-content-between">                        
+                        <h5 class="f-24 fw-700" id="modalAvisoLabel">Aviso de Privacidad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>                    
+                    
+                    <div class="modal-body pt-5">
+                        <p class="f-24" style="text-align: justify;">
+                            El presente aviso de privacidad en lo sucesivo "EL AVISO" se emite en cumplimiento a lo dispuesto por el artículo 15 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares en lo sucesivo "LA LEY", y sus correlativos del Reglamento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares en lo sucesivo "EL REGLAMENTO", y se pone a disposición de los usuarios que entreguen datos o información de carácter personal a ADO Y EMPRESAS COORDINADAS, S.A. DE C.V., en lo sucesivo "MOBILITY ADO". 
+                        </p>
+                        <p class="f-24">
+                            1.Responsable de la protección de sus Datos Personales
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO”, con domicilio para recibir notificaciones en Artilleros Número 123, Colonia 7 de Julio, Alcaldía Venustiano Carranza, Código Postal 15390, Ciudad de México, México; es responsable, del tratamiento de sus datos personales. 
+
+                            “MOBILITY ADO” en su carácter de responsable del tratamiento de datos personales observa los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad, tal y como lo establece "LA LEY". 
+                        </p>
+                        <p class="f-24">
+                            2.Forma y medios de contacto
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Para contactarnos, usted deberá presentar una solicitud redactada en idioma español, dirigida a la OFICINA DE PROTECCIÓN DE DATOS PERSONALES DE “MOBILITY ADO”, y hacerla llegar de manera presencial o por correo postal a la dirección: Artilleros Número 123, Colonia 7 de Julio, Alcaldía Venustiano Carranza, Código Postal 15390, Ciudad de México, México o bien por correo electrónico a: datos.personales@grupoado.com.mx 
+                        </p>
+                        <p class="f-24">
+                            3.Datos personales que recabamos y medios de obtención de Datos Personales
+                        </p>
+                        <p class="f-24" style="text-align: justify;">                            
+                            Los datos personales que recabamos de los usuarios para dar cumplimiento a los fines descritos en el presente "AVISO", son recabados de manera directa, cuando usted nos los proporciona a través de nuestras taquillas, nuestra página web www.ado.com.mx, aplicaciones móviles, redes sociales oficiales, servicios de mensajería instantánea por internet, centros de atención, quejas y sugerencias denominados “hola”, de manera telefónica y por correo electrónico, y cuando obtenemos información a través de otras fuentes de acceso público permitidas por "LA LEY" y “EL REGLAMENTO”. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Los datos que recabamos son los siguientes: <br>
+
+                            De las personas físicas: Nombre completo y apellidos, género (masculino o femenino), imagen, fecha de nacimiento, nacionalidad, número de teléfono fijo, número de celular, correo electrónico, domicilio, credenciales o contraseñas de redes sociales o buscadores (cuando usted decida registrarse como usuario de nuestras herramientas tecnológicas mediante redes sociales o buscadores), edad e identificación oficial. En cuanto a los datos de carácter patrimonial, tales como el Registro Federal de Contribuyentes (RFC), domicilio fiscal y datos e información de pago, usted al hacer uso de esta información para adquirir alguno de nuestros productos o servicios, otorga su consentimiento expreso para el tratamiento de estos datos conforme a lo dispuesto en el artículo 8 de “LA LEY”. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            De las personas morales: Del representante o apoderado legal, nombre completo y apellidos, identificación oficial, firma, correo electrónico, clave única de registro de población, fecha de nacimiento, teléfono, domicilio y nacionalidad. En cuanto a los datos de carácter patrimonial o financiero de la empresa, como el Registro Federal de Contribuyentes (RFC), domicilio fiscal y datos e información de pago, el apoderado o representante legal, al hacer uso de esta información para adquirir alguno de nuestros productos o servicios, otorga su consentimiento expreso para el tratamiento de estos datos conforme a lo dispuesto en el artículo 8 de “LA LEY”. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Le informamos que “MOBILITY ADO” no almacena ninguna información de tarjetas de débito, crédito o método de pago como parte del procesamiento de pago. “MOBILITY ADO” transmite la información de las tarjetas de débito, crédito o método de pago directamente con su Banco o a la plataforma de pago que esté utilizando. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Asimismo, toda vez que "LA LEY" permite otras fuentes de allegarnos de información como lo son directorios telefónicos y de servicios, físicos o electrónicos, los datos que por dichos medios podemos obtener son nombre y apellidos, teléfono, correo electrónico y domicilio. 
+                        </p>
+                        <p class="f-24">
+                            3.1. Datos Personales de terceros y menores de edad 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO” podrá recabar y dar tratamiento a datos personales de identificación y contacto de terceras personas, tales como su nombre completo, correo electrónico y número telefónico, cuando usted o dichos terceros los proporcionen para fines relacionados con los productos y/o servicios contratados en nombre de dichos terceros, por lo que al proporcionarlos usted reconoce haber informado a estos terceros sobre el uso de sus datos personales y haber obtenido de forma previa el consentimiento de estos últimos para que “MOBILITY ADO” pueda tratarlos para los fines antes señalados. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO” no recaba ni trata datos personales de menores de edad, por lo que usted reconoce que al momento de proporcionar sus datos es mayor de edad, cuenta con plena capacidad jurídica y ha leído el presente aviso de privacidad. En el caso de que como excepción se recaben y traten datos personales de menores de edad o de personas con incapacidad natural o legal establecida por ley, como el nombre y la edad, estos se recabarán o tratarán previo consentimiento de la persona que ejerza la patria potestad, o la tutela o representación legal, de conformidad con las leyes aplicables. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Si “MOBILITY ADO” identifica que un menor de edad o persona con incapacidad natural o legal ha proporcionado sus datos personales sin el consentimiento de quién ejerce su patria potestad o de su tutor o representante legal, o que, por error humano o técnico, se han recabado datos personales de menores de edad o de personas con incapacidad natural o legal, dichos datos personales serán eliminados de las bases de datos que los contengan en cuanto se tenga conocimiento de ello. 
+                        </p>
+                        <p class="f-24">
+                            3.2.Datos personales sensibles 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO” no recabará ni dará tratamiento a datos personales sensibles de ninguna clase. 
+                        </p>
+                        <p class="f-24">
+                            4.Finalidades del Tratamiento de los Datos Personales 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Sus datos personales serán utilizados para las siguientes finalidades: <br>
+
+                            Finalidades Primarias: Finalidades que dieron origen y son necesarias para la existencia, mantenimiento y cumplimiento de la relación jurídica entre usted y “MOBILITY ADO”: <br>
+
+                            Identificación y contacto. <br>
+
+                            Contratación, seguimiento, actualización, confirmación y generación de histórico de los productos y/o servicios contratados. <br>
+
+                            Creación, actualización, personalización, mantenimiento y autenticación de su cuenta de usuario. <br>
+
+                            Atención de dudas, quejas, comentarios, sugerencias, aclaraciones y seguimiento a las mismas. <br>
+
+                            De seguridad de las personas, al adquirir un producto o servicio, usted podría ser videograbado o fotografiado, por lo que se le informa que las imágenes provenientes de las videograbaciones o fotografías estarán protegidas por “LA LEY” y “EL REGLAMENTO”, y serán conservadas en las bases de datos por un período de diez días naturales, concluido dicho periodo las videograbaciones o fotografías serán formateadas o eliminadas. <br>
+
+                            Validación crediticia y de pago y evaluación del riesgo de fraude de las transacciones. <br>
+
+                            Facturación de los servicios o productos contratados. <br>
+
+                            Cumplimiento de obligaciones legales y normativas, así como de requerimientos de autoridades gubernamentales o judiciales, Federales, Estatales o Municipales y/o entidades regulatorias. <br>
+
+                            Finalidades Secundarias: Finalidades distintas y que no dan origen a la relación jurídica entre usted y “MOBILITY ADO”, pero que nos son de suma utilidad para brindarle un mejor servicio y desarrollar nuevos productos y servicios: <br>
+
+                            Evaluación de la calidad del servicio a través de encuestas, realizar estudios sobre hábitos de consumo y preferencias. <br>
+
+                            Participación en concursos, sorteos, eventos y promociones. Le informamos que, en el caso de que usted participe en dichas actividades, “MOBILITY ADO” podrá recabar su imagen a través de videos y/o fotografías y publicarlas a través de distintos medios de difusión tanto físicos como electrónicos, así como sus datos personales, tales como nombre completo y apellidos, fecha de nacimiento, correo electrónico, dirección y número telefónico, para en su caso documentar su participación o realizar la entrega del premio o incentivo que corresponda. <br>
+
+                            Informarle y/u ofrecerle la gama de productos y servicios que comercializa “MOBILITY ADO” y comunicarle promociones. <br>
+
+                            Mercadotecnia y prospección comercial. <br>
+
+                            Realizar tratamientos de técnicas de análisis masivo de datos para realizar actividades de perfilamiento y mejor conocimiento del cliente. <br>
+
+                            La prestación de los servicios y/o la creación de una cuenta implica el consentimiento pleno y sin reservas de los usuarios para el tratamiento de sus Datos Personales de acuerdo con el presente Aviso de Privacidad. <br>
+
+                            En caso que usted desee manifestar OPOSICIÓN a que sus datos personales sean tratados para las finalidades secundarias antes descritas, deberá de enviar un correo electrónico a la dirección datos.personales@grupoado.com.mx o presentar una solicitud por escrito, en idioma español a la siguiente dirección: Artilleros Número 123, Colonia 7 de Julio, Alcaldía Venustiano Carranza, Código Postal 15390, Ciudad de México, México, manifestando a qué finalidad o finalidades secundarias se opone. 
+                        </p>
+                        <p class="f-24">
+                            5. Limitaciones al uso de datos 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Usted puede limitar el uso o divulgación de sus datos personales haciéndonos llegar una solicitud por escrito en idioma español, dirigida a la OFICINA DE PROTECCIÓN DE DATOS PERSONALES DE “MOBILITY ADO”, al correo electrónico datos.personales@grupoado.com.mx o a la siguiente dirección: Artilleros Número 123, Colonia 7 de Julio, Alcaldía Venustiano Carranza, Código Postal 15390, Ciudad de México, México, en donde nos mencione su intención de limitar el uso o divulgación de sus datos personales e indique datos necesarios como: nombre completo y apellidos, copia simple de su identificación oficial, número de cliente (en caso de tener uno), número telefónico y domicilio o correo electrónico. <br>
+
+                            Además del procedimiento contemplado en el párrafo anterior, usted podrá cancelar su suscripción a los correos electrónicos que le enviemos con finalidades promocionales, mercadotécnicas y/o de publicidad, dando clic a la liga que se acompaña a cada uno de dichos correos, la cual se encuentra en la parte inferior de los mismos. 
+                        </p>
+                        <p class="f-24">
+                            6. Derechos ARCO 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Usted o su representante legal debidamente acreditado podrán ejercer, cuando procedan, los derechos de acceso, rectificación, cancelación u oposición en lo sucesivo "DERECHOS ARCO" que la "LEY" prevé, mediante el mecanismo que a continuación se describe; es importante mencionarle que el ejercicio de cualquiera de los "DERECHOS ARCO", no impide el ejercicio de otro derecho. 
+                        </p>
+                        <p class="f-24">
+                            6.1. Mecanismos para el ejercicio de los Derechos ARCO y la revocación del consentimiento para el tratamiento de sus datos personales. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            El ejercicio de los "DERECHOS ARCO" así como la revocación de su consentimiento para el tratamiento de sus datos personales se realizará a través de la presentación de la solicitud respectiva, que por escrito y en idioma español deba presentar el titular de los datos personales o su representante legal, en atención a la OFICINA DE PROTECCIÓN DE DATOS PERSONALES DE “MOBILITY ADO” a la dirección ubicada en Artilleros Número 123, Colonia 7 de Julio, Alcaldía Venustiano Carranza, Código Postal 15390, Ciudad de México, México (los gastos de envío correrán por cuenta del solicitante), o bien al correo electrónico datos.personales@grupoado.com.mx 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Su solicitud deberá indicar nombre completo y apellidos, copia simple, legible y vigente de su identificación oficial o en caso de utilizar medios electrónicos, deberá adjuntar la versión digitalizada de la misma (escaneo), correo electrónico o domicilio que designe para notificaciones y algún número telefónico de contacto. Si su solicitud es presentada por su representante legal, deberá adicionalmente, acompañar a su solicitud, los documentos oficiales que acrediten dicha representación. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            En caso de que la información proporcionada en su solicitud sea errónea o insuficiente para atenderla, o bien no se acompañen los documentos de acreditación correspondientes, se le hará un requerimiento dentro de los cinco días hábiles siguientes a la recepción de su solicitud, para que aporte los elementos o documentos necesarios para dar trámite a la misma. Usted contará con un plazo de diez días hábiles para atender dicho requerimiento, contados a partir del día siguiente en que haya sido emitido por la OFICINA DE PROTECCIÓN DE DATOS PERSONALES DE “MOBILITY ADO”. En caso de no dar respuesta a dicho requerimiento en el plazo otorgado, su solicitud se tendrá por no presentada. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Cumplidos los requisitos que se señalan con anterioridad, en un plazo máximo de veinte días hábiles contados a partir de la fecha de recepción de su solicitud de "DERECHOS ARCO", así como de revocación del tratamiento de datos personales, la OFICINA DE PROTECCIÓN DE DATOS PERSONALES DE “MOBILITY ADO” dará contestación sobre la procedencia de la misma, mediante correo electrónico dirigido a su persona a la dirección de correo electrónico que haya indicado en la propia solicitud, o bien enviando una notificación al domicilio que haya indicado para tales efectos (los veinte días se darán por cumplidos al momento de entregar el documento al servicio postal). Si la solicitud resulta procedente, está se hará efectiva dentro de los quince días hábiles siguientes a la fecha en que se comunica la respuesta sobre la procedencia de la misma. 
+                        </p>
+                        <p class="f-24">
+                            7. Transferencia de datos nacional e internacional 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Sus datos personales no serán transferidos nacional o internacionalmente a terceros sin su consentimiento, salvo por lo dispuesto en el artículo 37 de "LA LEY": <br>
+
+                            Cuando la transferencia se realice entre sociedades controladoras, subsidiarias o afiliadas bajo el control común de “MOBILITY ADO”, o a una sociedad matriz o a cualquier sociedad del mismo grupo de “MOBILITY ADO” que opere bajo los mismos procesos y políticas internas. <br>
+
+                            Cuando la transferencia sea necesaria para la prevención o el diagnóstico médico, la prestación de asistencia sanitaria, tratamiento médico o la gestión de servicios sanitarios. <br>
+
+                            Cuando la transferencia sea necesaria por virtud de un contrato celebrado o por celebrar que sea en su interés, por “MOBILITY ADO” y un tercero, con la finalidad de otorgarle beneficios. <br>
+
+                            Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relación jurídica entre “MOBILITY ADO” y usted, tales como los proveedores, instituciones bancarias y crediticias, cámaras de comercio, y entre otras. <br>
+
+                            Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un interés público, o para la procuración o administración de justicia. 
+                        </p>
+                        <p class="f-24">
+                            8. Información en Internet 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Hacemos de su conocimiento que contamos con tecnologías electrónicas (cookies y web beacons), en nuestra página de internet: www.ado.com.mx, por lo que cuando usted accede a nuestro Portal en Internet, es recibida por nuestra parte, información referente a como es su tipo de navegador y sistema operativo, las páginas de Internet que ha visitado recientemente, los vínculos que recientemente ha seguido, la dirección IP de su computadora y el sitio que cerró antes de entrar a nuestra página de internet. <br>
+
+                            Usted puede deshabilitar o ajustar el uso de estas tecnologías siguiendo los procedimientos del navegador de internet que utiliza para acceder a nuestro sitio web. 
+                        </p>
+                        <p class="f-24">
+                            8.1. Exclusión de responsabilidad de nuestro sitio de internet o aplicativo 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Al navegar o usar nuestro sitio de internet www.ado.com.mx o aplicativos, usted podría encontrar hipervínculos, links, banners, botones, propiedad de terceros que podrían solicitar sus datos personales (en adelante “Sitios de Terceros”). Los datos personales que usted proporcione a través de estos portales o sitios de Internet se sujetaran a los Avisos de Privacidad desplegados y aplicables a estos portales y sitios de Internet, por tanto “MOBILITY ADO” no será responsable por el uso, publicación, revelación y/o divulgación que usted haga respecto de sus datos personales a través de los Sitios de Terceros antes enunciados. Recomendamos a los usuarios ser cuidadosos y responsables sobre la información de carácter personal que proporcione en dichos sitios. 
+                        </p>
+                        <p class="f-24">
+                            9. Conservación de datos 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO” conservará su información durante el tiempo que la necesite para el propósito para el que se recabo, a menos que nos solicite la eliminación de la misma, y, en tal caso, siempre que “MOBILITY ADO” ya no tenga la necesidad de conservar su información por otros motivos. “MOBILITY ADO” podrá conservar sus datos personales por períodos más prolongados que los que requieren las leyes aplicables, si es de nuestro interés comercial legítimo y las leyes no lo prohíben. <br>
+
+                            Tenga en cuenta que cuando hayamos recabado su información personal en función de su consentimiento y usted retire dicho consentimiento, o ejerza sus derechos ARCO (a suprimir su información personal), es posible que mantengamos su información bloqueada y disponible tanto tiempo como se requiera para cumplir con las leyes aplicables y para que “MOBILITY ADO” cumpla con sus responsabilidades derivadas del procesamiento de sus datos. 
+                        </p>
+                        <p class="f-24">
+                            10. Modificaciones al presente aviso de privacidad 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            “MOBILITY ADO” se reserva el derecho de efectuar en cualquier tiempo modificaciones o actualizaciones al presente "AVISO". Las modificaciones que se efectúen se pondrán a disposición de los usuarios a través de alguno o algunos de los siguientes medios: anuncios visibles en nuestros taquillas o establecimientos, vía nuestro sitio de internet www.ado.com.mx, aplicaciones móviles, vía correo electrónico a la dirección más reciente que tengamos de usted, por medio de carteles, grabaciones sonoras, de video o personalmente por medio de nuestros encargados, al momento de acudir a cualquiera de nuestras instalaciones. 
+                        </p>
+                        <p class="f-24">
+                            11. Definiciones 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            Se entiende para efectos del presente "AVISO" lo siguiente: 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            I. Cookies: Son los archivos de texto que se descargan automáticamente y se almacenan en el disco duro del equipo de cómputo del usuario al navegar en una página o portal de Internet específico, que permiten almacenar al servidor de Internet ciertos datos, entre ellos, información sobre sus preferencias y pautas de navegación. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            II. Días: Por disposición del Artículo 3° en su fracción VII de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, los plazos y tiempos estipulados en días, se contarán en días hábiles. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            III. Derechos ARCO: Son los Derechos de Acceso, Rectificación, Cancelación y Oposición, consagrados en "LA LEY" que por sus siglas forman dicha palabra. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            IV. Ley: Ley Federal de Protección de Datos Personales en Posesión de los Particulares, publicada en el Diario Oficial de la Federación el 5 de julio de 2010. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            V. Reglamento: Reglamento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, publicado en el Diario Oficial de la Federación el 21 de diciembre de 2011. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            VI. Transferencia: Toda comunicación de datos personales dentro o fuera del territorio mexicano, realizada a persona distinta del titular, del responsable o del encargado. 
+                        </p>
+                        <p class="f-24" style="text-align: justify;">
+                            VII. Web beacons: Es una imagen usada exclusivamente para cuantificar el número de visitas o monitorear el comportamiento del usuario. 
+                        </p>
+                    </div>                                
                 </div>
             </div>
         </div>

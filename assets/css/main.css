@@ -352,7 +352,7 @@ ul{
 #accordionTerminales,
 #accordionTerminales .accordion-header,
 #accordionTerminales .accordion-header button{
-    background-color: #FAFAFA;
+    background-color: #fff;
     font-size: 20px;
 }
 .subaccordions,
@@ -360,11 +360,12 @@ ul{
 .subaccordions .accordion-body{
     background-color: #F1F3F9 !important;
     font-size: 20px;
+    color: #1D1F24;
 }
 .accordion-item,
 .accordion-body,
 .accordion-button{
-    background-color: #F1F3F9 !important;
+    background-color: #fff !important;
 }
 .subaccordions .list-group .list-group-item{
     background-color: #F1F3F9;
